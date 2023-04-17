@@ -28,7 +28,7 @@
   docker-compose up
   ```
 
-  <H3>El proyecto runea en la dirección http://127.0.0.1:8005/
+  <H3>El proyecto runea en la dirección http://127.0.0.1:8006/
   </h3>
 
 <h1>OPCION 2 : Runear en tu maquina</h1>
