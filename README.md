@@ -40,7 +40,7 @@
   Tener python 3.10 o superior instalado
   </h3>
   
-  <H3>En la carpeta app debes ejecutar los siguientes comandos
+  <H3>En la carpeta AppWebBA debes ejecutar los siguientes comandos
   </h3>
 
   <h1>comando 1</h1>
