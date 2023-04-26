@@ -66,7 +66,7 @@ namespace BuenosAires.BusinessLayer
         public void LeerTodos()
         {
             var dc = new DcProducto();
-            dc.LeerTodos();
+            dc.LeerCantidad();
             this.CopiarPropiedades(dc);
         }
 
