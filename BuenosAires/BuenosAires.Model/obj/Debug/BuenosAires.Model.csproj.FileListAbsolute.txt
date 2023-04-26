@@ -19,3 +19,14 @@ C:\Users\glado\Documents\GitHub\integracion\BuenosAires\BuenosAires.Model\obj\De
 C:\Users\glado\Documents\GitHub\integracion\BuenosAires\BuenosAires.Model\obj\Debug\BuenosAires.Model.csproj.CopyComplete
 C:\Users\glado\Documents\GitHub\integracion\BuenosAires\BuenosAires.Model\obj\Debug\BuenosAires.Model.dll
 C:\Users\glado\Documents\GitHub\integracion\BuenosAires\BuenosAires.Model\obj\Debug\BuenosAires.Model.pdb
+C:\Users\CETECOM\Documents\GitHub\integracion\BuenosAires\BuenosAires.Model\bin\Debug\BuenosAires.Model.dll
+C:\Users\CETECOM\Documents\GitHub\integracion\BuenosAires\BuenosAires.Model\bin\Debug\BuenosAires.Model.pdb
+C:\Users\CETECOM\Documents\GitHub\integracion\BuenosAires\BuenosAires.Model\bin\Debug\EntityFramework.dll
+C:\Users\CETECOM\Documents\GitHub\integracion\BuenosAires\BuenosAires.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\CETECOM\Documents\GitHub\integracion\BuenosAires\BuenosAires.Model\bin\Debug\EntityFramework.xml
+C:\Users\CETECOM\Documents\GitHub\integracion\BuenosAires\BuenosAires.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\CETECOM\Documents\GitHub\integracion\BuenosAires\BuenosAires.Model\obj\Debug\BuenosAires.Model.csproj.AssemblyReference.cache
+C:\Users\CETECOM\Documents\GitHub\integracion\BuenosAires\BuenosAires.Model\obj\Debug\BuenosAires.Model.csproj.CoreCompileInputs.cache
+C:\Users\CETECOM\Documents\GitHub\integracion\BuenosAires\BuenosAires.Model\obj\Debug\BuenosAires.Model.csproj.CopyComplete
+C:\Users\CETECOM\Documents\GitHub\integracion\BuenosAires\BuenosAires.Model\obj\Debug\BuenosAires.Model.dll
+C:\Users\CETECOM\Documents\GitHub\integracion\BuenosAires\BuenosAires.Model\obj\Debug\BuenosAires.Model.pdb
