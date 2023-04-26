@@ -16,7 +16,7 @@ namespace BuenosAires.BodegaBA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new VentanaProductos());
+            Application.Run(new VentanaStockProducto());
         }
     }
 }
