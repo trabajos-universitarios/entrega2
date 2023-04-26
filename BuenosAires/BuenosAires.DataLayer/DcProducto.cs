@@ -97,6 +97,7 @@ namespace BuenosAires.DataLayer
                 var bd = new base_datosEntities();
                 this.Lista = bd.Producto.ToList();
                 if (this.Lista.Count == 0) this.Mensaje = "La lista de productos se encuentra vacía";
+<<<<<<< Updated upstream
                 foreach (var producto in Lista)
                 {
                     // Obtener el dato que necesitas del producto
@@ -105,6 +106,8 @@ namespace BuenosAires.DataLayer
                     // Usar el dato en el método externo
                     DcStockProducto.ContarStockProductoPorProducto(id);// Ejemplo, reemplaza "MetodoExterno" con el nombre del método que necesites
                 }
+=======
+>>>>>>> Stashed changes
                 bd.Dispose();
             }
             catch (Exception ex)
@@ -113,6 +116,10 @@ namespace BuenosAires.DataLayer
                 this.Mensaje = Util.MensajeError($"No fue posible {this.Accion}", ex);
             }
         }
+<<<<<<< Updated upstream
+=======
+        
+>>>>>>> Stashed changes
 
 
 
