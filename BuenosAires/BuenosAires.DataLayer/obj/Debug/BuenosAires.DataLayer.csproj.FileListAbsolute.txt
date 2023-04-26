@@ -1,0 +1,14 @@
+C:\BuenosAires\BuenosAires\BuenosAires.DataLayer\bin\Debug\BuenosAires.DataLayer.dll
+C:\BuenosAires\BuenosAires\BuenosAires.DataLayer\bin\Debug\BuenosAires.DataLayer.pdb
+C:\BuenosAires\BuenosAires\BuenosAires.DataLayer\obj\Debug\BuenosAires.DataLayer.csproj.AssemblyReference.cache
+C:\BuenosAires\BuenosAires\BuenosAires.DataLayer\obj\Debug\BuenosAires.DataLayer.csproj.CoreCompileInputs.cache
+C:\BuenosAires\BuenosAires\BuenosAires.DataLayer\obj\Debug\BuenosAires.DataLayer.dll
+C:\BuenosAires\BuenosAires\BuenosAires.DataLayer\obj\Debug\BuenosAires.DataLayer.pdb
+C:\BuenosAires\BuenosAires\BuenosAires.DataLayer\bin\Debug\BuenosAires.DataLayer.dll.config
+C:\BuenosAires\BuenosAires\BuenosAires.DataLayer\bin\Debug\BuenosAires.Model.dll
+C:\BuenosAires\BuenosAires\BuenosAires.DataLayer\bin\Debug\EntityFramework.dll
+C:\BuenosAires\BuenosAires\BuenosAires.DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\BuenosAires\BuenosAires\BuenosAires.DataLayer\bin\Debug\BuenosAires.Model.pdb
+C:\BuenosAires\BuenosAires\BuenosAires.DataLayer\bin\Debug\EntityFramework.xml
+C:\BuenosAires\BuenosAires\BuenosAires.DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\BuenosAires\BuenosAires\BuenosAires.DataLayer\obj\Debug\BuenosAires.DataLayer.csproj.CopyComplete
