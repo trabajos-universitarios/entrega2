@@ -89,6 +89,22 @@ namespace BuenosAires.DataLayer
             }
         }
 
+        public void LeerCantidad()
+        {
+            this.Inicializar($"obtener la lista de productos");
+            try
+            {
+                var bd = new base_datosEntities();
+                this.Lista = bd.Producto.ToList();
+                if (this.Lista.Count == 0) this.Mensaje = "La lista de productos se encuentra vacía";
+                bd.Dispose();
+            }
+            catch (Exception ex)
+            {
+                this.HayErrores = true;
+                this.Mensaje = Util.MensajeError($"No fue posible {this.Accion}", ex);
+            }
+        }
         public void LeerConStock()
         {
             this.Inicializar($"obtener la lista de productos");

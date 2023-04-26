@@ -178,5 +178,12 @@ namespace BuenosAires.BodegaBA
         {
 
         }
+
+        private void BtnStock_Click(object sender, EventArgs e)
+        {
+            VentanaStockProducto ventanaStockProducto = new VentanaStockProducto();
+            ventanaStockProducto.Show();
+            this.Hide();
+        }
     }
 }

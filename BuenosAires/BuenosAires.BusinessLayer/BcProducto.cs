@@ -70,6 +70,13 @@ namespace BuenosAires.BusinessLayer
             this.CopiarPropiedades(dc);
         }
 
+        public void LeerCantidad()
+        {
+            var dc = new DcProducto();
+            dc.LeerCantidad();
+            this.CopiarPropiedades(dc);
+        }
+
         public void Leer(int id)
         {
             var dc = new DcProducto();

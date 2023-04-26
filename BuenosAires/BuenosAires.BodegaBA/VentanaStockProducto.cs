@@ -32,7 +32,10 @@ namespace BuenosAires.BodegaBA
             StartPosition = FormStartPosition.CenterScreen;
         }
 
-
+        private void VentanaProductos_Load(object sender, EventArgs e)
+        {
+            RefrescarDataGridView();
+        }
 
         public void RefrescarDataGridView()
         {
@@ -61,6 +64,13 @@ namespace BuenosAires.BodegaBA
         private void DgvProducto_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            VentanaProductos ventanaProductos = new VentanaProductos();
+            ventanaProductos.Show();
+            this.Hide();
         }
     }
 }
