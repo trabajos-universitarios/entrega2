@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="VentanaStockProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaStockProducto.Designer.cs">
+      <DependentUpon>VentanaStockProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanaBuscarID.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +88,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="VentanaStockProducto.resx">
+      <DependentUpon>VentanaStockProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\DataSources\BuenosAires.Model.Producto.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

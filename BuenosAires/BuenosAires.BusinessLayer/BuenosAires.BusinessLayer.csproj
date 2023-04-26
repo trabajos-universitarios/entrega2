@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="BcPerfilUsuario.cs" />
     <Compile Include="BcProducto.cs" />
+    <Compile Include="BcStockProducto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -174,5 +174,9 @@ namespace BuenosAires.BodegaBA
             RefrescarDataGridView();
         }
 
+        private void DgvProducto_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
