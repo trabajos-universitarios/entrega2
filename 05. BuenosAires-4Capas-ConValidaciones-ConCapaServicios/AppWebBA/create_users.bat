@@ -1,0 +1,1 @@
+call python manage.py runscript -v3 create_users

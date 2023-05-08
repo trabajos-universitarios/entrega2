@@ -1,0 +1,10 @@
+C:\BuenosAires\BuenosAires\BuenosAires.VentaBA\bin\Debug\BuenosAires.VentaBA.exe.config
+C:\BuenosAires\BuenosAires\BuenosAires.VentaBA\bin\Debug\BuenosAires.VentaBA.exe
+C:\BuenosAires\BuenosAires\BuenosAires.VentaBA\bin\Debug\BuenosAires.VentaBA.pdb
+C:\BuenosAires\BuenosAires\BuenosAires.VentaBA\obj\Debug\BuenosAires.VentaBA.Properties.Resources.resources
+C:\BuenosAires\BuenosAires\BuenosAires.VentaBA\obj\Debug\BuenosAires.VentaBA.VentanaBuscarID.resources
+C:\BuenosAires\BuenosAires\BuenosAires.VentaBA\obj\Debug\BuenosAires.VentaBA.VentanaCatalogoProductos.resources
+C:\BuenosAires\BuenosAires\BuenosAires.VentaBA\obj\Debug\BuenosAires.VentaBA.csproj.GenerateResource.cache
+C:\BuenosAires\BuenosAires\BuenosAires.VentaBA\obj\Debug\BuenosAires.VentaBA.csproj.CoreCompileInputs.cache
+C:\BuenosAires\BuenosAires\BuenosAires.VentaBA\obj\Debug\BuenosAires.VentaBA.exe
+C:\BuenosAires\BuenosAires\BuenosAires.VentaBA\obj\Debug\BuenosAires.VentaBA.pdb
