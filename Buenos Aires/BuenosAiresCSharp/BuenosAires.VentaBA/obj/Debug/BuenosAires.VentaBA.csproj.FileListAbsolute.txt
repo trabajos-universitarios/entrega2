@@ -21,3 +21,15 @@ C:\BuenosAires\BuenosAiresCSharp\BuenosAires.VentaBA\obj\Debug\BuenosAires.Venta
 C:\BuenosAires\BuenosAiresCSharp\BuenosAires.VentaBA\obj\Debug\BuenosAires.VentaBA.csproj.CoreCompileInputs.cache
 C:\BuenosAires\BuenosAiresCSharp\BuenosAires.VentaBA\obj\Debug\BuenosAires.VentaBA.exe
 C:\BuenosAires\BuenosAiresCSharp\BuenosAires.VentaBA\obj\Debug\BuenosAires.VentaBA.pdb
+C:\Users\CETECOM\Documents\GitHub\integracion\Buenos Aires\BuenosAiresCSharp\BuenosAires.VentaBA\bin\Debug\BuenosAires.VentaBA.exe.config
+C:\Users\CETECOM\Documents\GitHub\integracion\Buenos Aires\BuenosAiresCSharp\BuenosAires.VentaBA\bin\Debug\BuenosAires.VentaBA.exe
+C:\Users\CETECOM\Documents\GitHub\integracion\Buenos Aires\BuenosAiresCSharp\BuenosAires.VentaBA\bin\Debug\BuenosAires.VentaBA.pdb
+C:\Users\CETECOM\Documents\GitHub\integracion\Buenos Aires\BuenosAiresCSharp\BuenosAires.VentaBA\obj\Debug\BuenosAires.VentaBA.csproj.AssemblyReference.cache
+C:\Users\CETECOM\Documents\GitHub\integracion\Buenos Aires\BuenosAiresCSharp\BuenosAires.VentaBA\obj\Debug\BuenosAires.VentaBA.Properties.Resources.resources
+C:\Users\CETECOM\Documents\GitHub\integracion\Buenos Aires\BuenosAiresCSharp\BuenosAires.VentaBA\obj\Debug\BuenosAires.VentaBA.VentanaBuscarID.resources
+C:\Users\CETECOM\Documents\GitHub\integracion\Buenos Aires\BuenosAiresCSharp\BuenosAires.VentaBA\obj\Debug\BuenosAires.VentaBA.VentanaCatalogoProductos.resources
+C:\Users\CETECOM\Documents\GitHub\integracion\Buenos Aires\BuenosAiresCSharp\BuenosAires.VentaBA\obj\Debug\BuenosAires.VentaBA.VentanaStockProducto.resources
+C:\Users\CETECOM\Documents\GitHub\integracion\Buenos Aires\BuenosAiresCSharp\BuenosAires.VentaBA\obj\Debug\BuenosAires.VentaBA.csproj.GenerateResource.cache
+C:\Users\CETECOM\Documents\GitHub\integracion\Buenos Aires\BuenosAiresCSharp\BuenosAires.VentaBA\obj\Debug\BuenosAires.VentaBA.csproj.CoreCompileInputs.cache
+C:\Users\CETECOM\Documents\GitHub\integracion\Buenos Aires\BuenosAiresCSharp\BuenosAires.VentaBA\obj\Debug\BuenosAires.VentaBA.exe
+C:\Users\CETECOM\Documents\GitHub\integracion\Buenos Aires\BuenosAiresCSharp\BuenosAires.VentaBA\obj\Debug\BuenosAires.VentaBA.pdb

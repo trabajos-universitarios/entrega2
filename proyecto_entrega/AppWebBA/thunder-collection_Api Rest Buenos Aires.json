@@ -1,0 +1,23 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Api Rest Buenos Aires",
+    "dateExported": "2023-05-17T10:15:36.055Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "eba8167d-3f92-4ec2-9f50-561d7d02f4b4",
+            "colId": "f40224fc-9bab-430d-bb24-7c1e0d59067f",
+            "containerId": "",
+            "name": "productos_bodega_leer_todos",
+            "url": "http://127.0.0.1:8000/api/productos_bodega_leer_todos/",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-05-17T09:46:53.913Z",
+            "modified": "2023-05-17T10:00:39.931Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

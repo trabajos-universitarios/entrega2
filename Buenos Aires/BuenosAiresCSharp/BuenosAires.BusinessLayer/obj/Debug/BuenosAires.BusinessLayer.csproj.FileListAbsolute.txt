@@ -30,3 +30,19 @@ C:\BuenosAires\BuenosAiresCSharp\BuenosAires.BusinessLayer\obj\Debug\BuenosAires
 C:\BuenosAires\BuenosAiresCSharp\BuenosAires.BusinessLayer\obj\Debug\BuenosAires.BusinessLayer.csproj.CopyComplete
 C:\BuenosAires\BuenosAiresCSharp\BuenosAires.BusinessLayer\obj\Debug\BuenosAires.BusinessLayer.dll
 C:\BuenosAires\BuenosAiresCSharp\BuenosAires.BusinessLayer\obj\Debug\BuenosAires.BusinessLayer.pdb
+C:\Users\CETECOM\Documents\GitHub\integracion\Buenos Aires\BuenosAiresCSharp\BuenosAires.BusinessLayer\bin\Debug\BuenosAires.BusinessLayer.dll
+C:\Users\CETECOM\Documents\GitHub\integracion\Buenos Aires\BuenosAiresCSharp\BuenosAires.BusinessLayer\bin\Debug\BuenosAires.BusinessLayer.pdb
+C:\Users\CETECOM\Documents\GitHub\integracion\Buenos Aires\BuenosAiresCSharp\BuenosAires.BusinessLayer\bin\Debug\BuenosAires.DataLayer.dll
+C:\Users\CETECOM\Documents\GitHub\integracion\Buenos Aires\BuenosAiresCSharp\BuenosAires.BusinessLayer\bin\Debug\BuenosAires.Model.dll
+C:\Users\CETECOM\Documents\GitHub\integracion\Buenos Aires\BuenosAiresCSharp\BuenosAires.BusinessLayer\bin\Debug\EntityFramework.dll
+C:\Users\CETECOM\Documents\GitHub\integracion\Buenos Aires\BuenosAiresCSharp\BuenosAires.BusinessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\CETECOM\Documents\GitHub\integracion\Buenos Aires\BuenosAiresCSharp\BuenosAires.BusinessLayer\bin\Debug\BuenosAires.DataLayer.pdb
+C:\Users\CETECOM\Documents\GitHub\integracion\Buenos Aires\BuenosAiresCSharp\BuenosAires.BusinessLayer\bin\Debug\BuenosAires.DataLayer.dll.config
+C:\Users\CETECOM\Documents\GitHub\integracion\Buenos Aires\BuenosAiresCSharp\BuenosAires.BusinessLayer\bin\Debug\BuenosAires.Model.pdb
+C:\Users\CETECOM\Documents\GitHub\integracion\Buenos Aires\BuenosAiresCSharp\BuenosAires.BusinessLayer\bin\Debug\EntityFramework.xml
+C:\Users\CETECOM\Documents\GitHub\integracion\Buenos Aires\BuenosAiresCSharp\BuenosAires.BusinessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\CETECOM\Documents\GitHub\integracion\Buenos Aires\BuenosAiresCSharp\BuenosAires.BusinessLayer\obj\Debug\BuenosAires.BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\CETECOM\Documents\GitHub\integracion\Buenos Aires\BuenosAiresCSharp\BuenosAires.BusinessLayer\obj\Debug\BuenosAires.BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\CETECOM\Documents\GitHub\integracion\Buenos Aires\BuenosAiresCSharp\BuenosAires.BusinessLayer\obj\Debug\BuenosAires.BusinessLayer.csproj.CopyComplete
+C:\Users\CETECOM\Documents\GitHub\integracion\Buenos Aires\BuenosAiresCSharp\BuenosAires.BusinessLayer\obj\Debug\BuenosAires.BusinessLayer.dll
+C:\Users\CETECOM\Documents\GitHub\integracion\Buenos Aires\BuenosAiresCSharp\BuenosAires.BusinessLayer\obj\Debug\BuenosAires.BusinessLayer.pdb
