@@ -7,3 +7,12 @@
 05. BuenosAires-4Capas-ConValidaciones-ConCapaServicios/BuenosAires/BuenosAires.DataLayer/obj/Debug/BuenosAires.DataLayer.csproj.AssemblyReference.cache
 05. BuenosAires-4Capas-ConValidaciones-ConCapaServicios/BuenosAires/BuenosAires.Model/obj/Debug/BuenosAires.Model.csproj.AssemblyReference.cache
 05. BuenosAires-4Capas-ConValidaciones-ConCapaServicios/BuenosAires/BuenosAires.VentaBA/obj/Debug/DesignTimeResolveAssemblyReferences.cache
+*.pyc
+__pycache__/
+*.pyo
+*.pyc
+*.py~
+*_pycache_/
+*.swp
+*.swo
+
