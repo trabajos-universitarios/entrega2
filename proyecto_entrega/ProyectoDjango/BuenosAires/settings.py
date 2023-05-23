@@ -103,12 +103,20 @@ WSGI_APPLICATION = 'BuenosAires.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# settings.py
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    "default": {
+        "ENGINE": "mssql",
+        "NAME": "base_datos",
+        "USER": "sa",
+        "PASSWORD": "DuocBuenosAires123",
+        "HOST": "conexion.sofiawisdom.cl",
+        "PORT": "1433",
+        "OPTIONS": {"driver": "ODBC Driver 17 for SQL Server", 
+        },
+    },
 }
+
 
 
 
@@ -158,8 +166,8 @@ THOUSAND_SEPARATOR = "."
 STATIC_URL = '/static/'
 MEDIA_ROOT = path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-LOGIN_REDIRECT_URL = 'home'
-LOGOUT_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = 'tienda'
+LOGOUT_REDIRECT_URL = 'tienda'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
