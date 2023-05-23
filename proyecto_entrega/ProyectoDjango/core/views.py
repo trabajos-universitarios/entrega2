@@ -12,6 +12,10 @@ from .forms import RegistrarUsuarioForm, PerfilUsuarioForm
 from transbank.webpay.webpay_plus.transaction import Transaction, WebpayOptions
 import random
 
+def mis_compras(request):
+    return render(request, "core/mis_compras.html")
+
+
 def home(request):
     return render(request, "core/home.html")
 

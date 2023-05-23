@@ -20,7 +20,7 @@
         <script>
             $(document).ready(function(){
                 set_nav_li("#tienda", "{% url 'tienda' %}", "{% static 'core/img/inicio.png' %}");
-                set_nav_li("#inicio", "{% url 'home' %}", "{% static 'core/img/tienda.png' %}");
+                set_nav_li("#inicio", "{% url 'mis_compras' %}", "{% static 'core/img/tienda.png' %}");
                 set_nav_li("#admsis", "{% url 'admin:index' %}", "{% static 'core/img/cohete.png' %}");
                 set_nav_li("#manpro", "{% url 'administrar_productos' 'ins' '-1' %}", "{% static 'core/img/starkind.png' %}");
                 set_nav_li("#regist", "{% url 'registrar_usuario' %}", "{% static 'core/img/registro.png' %}");
