@@ -107,7 +107,7 @@ WSGI_APPLICATION = 'BuenosAires.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "mssql",
-        "NAME": "base_datos",
+        "NAME": "prueba",
         "USER": "sa",
         "PASSWORD": "DuocBuenosAires123",
         "HOST": "conexion.sofiawisdom.cl",
