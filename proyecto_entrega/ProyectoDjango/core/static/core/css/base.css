@@ -7,7 +7,7 @@ h1 {
     margin-bottom: 40px !important;
     text-align: center !important;
     font-size: 50px !important;
-    color: red !important;
+    color: rgb(0, 0, 0) !important;
 }
 
 .nav_item_text {
