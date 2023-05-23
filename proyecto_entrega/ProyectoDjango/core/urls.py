@@ -8,13 +8,13 @@ from .views import  index
 from .views_poblar_bd import poblar_bd
 
 urlpatterns = [
-    path('', home, name="home"),
+    path('home', home, name="home"),
     path('index', index, name="index"),
     path('poblar_bd', poblar_bd, name="poblar_bd"),
     
     path('administrar_productos/<action>/<id>', administrar_productos, name="administrar_productos"),
     
-    path('tienda', tienda, name="tienda"),
+    path('', tienda, name="tienda"),
     path('ficha/<id>', ficha, name="ficha"),
     path('iniciar_sesion/', iniciar_sesion, name="iniciar_sesion"),
     path('cerrar_sesion/', cerrar_sesion, name='cerrar_sesion'),
