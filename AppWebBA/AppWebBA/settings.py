@@ -91,14 +91,16 @@ DATABASES = {
         'ENGINE': 'mssql',
         'NAME': 'base_datos',
         'USER': 'sa',
-        'PASSWORD': '123',
-        'HOST': 'SINCLAIRE\\SQLEXPRESS',
+        'PASSWORD': 'DuocBuenosAires123',
+        'HOST': 'conexion.sofiawisdom.cl',
         'PORT': '',
         'OPTIONS': {
             'driver': 'ODBC Driver 17 for SQL Server',
         },
     },
 }
+
+
 
 
 # Password validation

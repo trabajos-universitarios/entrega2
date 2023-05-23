@@ -1,0 +1,6 @@
+{
+    "editor.minimap.enabled": false,
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "files.autoSave": "afterDelay",
+    "python.defaultInterpreterPath": "C:\\TiendaStark2023\\TiendaStark_venv\\AppWebBA_venv\\Scripts\\python.exe"
+}
