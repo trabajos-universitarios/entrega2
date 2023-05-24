@@ -13,15 +13,15 @@
     {% if list %}
         <div class="row text-center">
         {% for ve in list %}
-            <a href="{% url 'ficha' ve.patente %}">
+            <a href="#">
                 <div class="tienda_auto_recuadro">
                     <div class="tienda_auto_recuadro_interior">
-                        <img src="/media/{{ ve.imagen }}" class="tienda_auto_imagen" alt="">
+                        <img src="{% static "core/{{ve.imagen}}" %}" class="tienda_auto_imagen" alt="">
                     </div>
                     <div>
-                        {{ ve.marca }}
+                        {{ ve.nomprod }}
                         <br>
-                        {{ ve.modelo }}
+                        {{ ve.precio }}
                     </div>
                 </div>
             </a>

@@ -11,7 +11,9 @@ from .forms import *
 import random
 
 def tienda(request):
-    return render(request, "core/tienda.html")
+    list = Producto.objects.all()
+    contexto = {'list' : list}
+    return render(request, "core/tienda.html", contexto)
 
 def iniciar_sesion(request):
     return render(request, "core/iniciar_sesion.html")
