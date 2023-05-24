@@ -21,3 +21,26 @@ C:\BuenosAires\BuenosAiresCSharp\BuenosAires.BodegaBA\obj\Debug\BuenosAires.Bode
 C:\BuenosAires\BuenosAiresCSharp\BuenosAires.BodegaBA\obj\Debug\BuenosAires.BodegaBA.3Capas.csproj.CopyComplete
 C:\BuenosAires\BuenosAiresCSharp\BuenosAires.BodegaBA\obj\Debug\BuenosAires.BodegaBA.exe
 C:\BuenosAires\BuenosAiresCSharp\BuenosAires.BodegaBA\obj\Debug\BuenosAires.BodegaBA.pdb
+C:\Users\CETECOM\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BodegaBA\bin\Debug\BuenosAires.BodegaBA.exe.config
+C:\Users\CETECOM\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BodegaBA\bin\Debug\BuenosAires.BodegaBA.exe
+C:\Users\CETECOM\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BodegaBA\bin\Debug\BuenosAires.BodegaBA.pdb
+C:\Users\CETECOM\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BodegaBA\bin\Debug\BuenosAires.BusinessLayer.dll
+C:\Users\CETECOM\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BodegaBA\bin\Debug\BuenosAires.Model.dll
+C:\Users\CETECOM\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BodegaBA\bin\Debug\EntityFramework.dll
+C:\Users\CETECOM\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BodegaBA\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\CETECOM\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BodegaBA\bin\Debug\BuenosAires.DataLayer.dll
+C:\Users\CETECOM\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BodegaBA\bin\Debug\BuenosAires.BusinessLayer.pdb
+C:\Users\CETECOM\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BodegaBA\bin\Debug\BuenosAires.Model.pdb
+C:\Users\CETECOM\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BodegaBA\bin\Debug\EntityFramework.xml
+C:\Users\CETECOM\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BodegaBA\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\CETECOM\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BodegaBA\bin\Debug\BuenosAires.DataLayer.pdb
+C:\Users\CETECOM\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BodegaBA\bin\Debug\BuenosAires.DataLayer.dll.config
+C:\Users\CETECOM\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BodegaBA\obj\Debug\BuenosAires.BodegaBA.3Capas.csproj.AssemblyReference.cache
+C:\Users\CETECOM\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BodegaBA\obj\Debug\BuenosAires.BodegaBA.VentanaBuscarID.resources
+C:\Users\CETECOM\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BodegaBA\obj\Debug\BuenosAires.BodegaBA.VentanaCatalogoProductos.resources
+C:\Users\CETECOM\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BodegaBA\obj\Debug\BuenosAires.BodegaBA.Properties.Resources.resources
+C:\Users\CETECOM\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BodegaBA\obj\Debug\BuenosAires.BodegaBA.3Capas.csproj.GenerateResource.cache
+C:\Users\CETECOM\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BodegaBA\obj\Debug\BuenosAires.BodegaBA.3Capas.csproj.CoreCompileInputs.cache
+C:\Users\CETECOM\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BodegaBA\obj\Debug\BuenosAires.BodegaBA.3Capas.csproj.CopyComplete
+C:\Users\CETECOM\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BodegaBA\obj\Debug\BuenosAires.BodegaBA.exe
+C:\Users\CETECOM\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BodegaBA\obj\Debug\BuenosAires.BodegaBA.pdb
