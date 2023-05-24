@@ -19,15 +19,15 @@
     {% block navbar %}
         <script>
             $(document).ready(function(){
-                set_nav_li("#tienda", "{% url 'tienda' %}", "{% static 'core/img/inicio.png' %}");
-                set_nav_li("#inicio", "{% url 'mis_compras' %}", "{% static 'core/img/tienda.png' %}");
-                set_nav_li("#admsis", "{% url 'admin:index' %}", "{% static 'core/img/cohete.png' %}");
-                set_nav_li("#manpro", "{% url 'administrar_productos' 'ins' '-1' %}", "{% static 'core/img/starkind.png' %}");
-                set_nav_li("#regist", "{% url 'registrar_usuario' %}", "{% static 'core/img/registro.png' %}");
-                set_nav_li("#inises", "{% url 'iniciar_sesion' %}", "{% static 'core/img/login.png' %}");
-                set_nav_li("#cerses", "{% url 'cerrar_sesion' %}", "{% static 'core/img/login.png' %}");
-                set_nav_li("#perfil", "{% url 'perfil_usuario' %}", "{% static 'core/img/profile.png' %}");
-                set_nav_li("#chpass", "{% url 'cambiar_password' %}", "{% static 'core/img/password.png' %}");
+                set_nav_li("#tienda", "#", "{% static 'core/img/inicio.png' %}");
+                set_nav_li("#inicio", "#", "{% static 'core/img/tienda.png' %}");
+                set_nav_li("#admsis", "#", "{% static 'core/img/cohete.png' %}");
+                set_nav_li("#manpro", "#", "{% static 'core/img/starkind.png' %}");
+                set_nav_li("#regist", "#", "{% static 'core/img/registro.png' %}");
+                set_nav_li("#inises", "#", "{% static 'core/img/login.png' %}");
+                set_nav_li("#cerses", "#", "{% static 'core/img/login.png' %}");
+                set_nav_li("#perfil", "#", "{% static 'core/img/profile.png' %}");
+                set_nav_li("#chpass", "#", "{% static 'core/img/password.png' %}");
 
                 function set_nav_li(id, url, img) {
                     $(id).addClass('nav-item list-inline-item align-center nav_item_text');

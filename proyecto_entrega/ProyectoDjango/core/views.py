@@ -23,23 +23,7 @@ def index(request):
     return render(request, "core/index.html")
 
 def iniciar_sesion(request):
-    data = {"mesg": "", "form": IniciarSesionForm()}
-
-    if request.method == "POST":
-        form = IniciarSesionForm(request.POST)
-        if form.is_valid:
-            username = request.POST.get("username")
-            password = request.POST.get("password")
-            user = authenticate(username=username, password=password)
-            if user is not None:
-                if user.is_active:
-                    login(request, user)
-                    return redirect(home)
-                else:
-                    data["mesg"] = "¡La cuenta o la password no son correctos!"
-            else:
-                data["mesg"] = "¡La cuenta o la password no son correctos!"
-    return render(request, "core/iniciar_sesion.html", data)
+    return render(request, "core/iniciar_sesion.html")
 
 def cerrar_sesion(request):
     logout(request)
