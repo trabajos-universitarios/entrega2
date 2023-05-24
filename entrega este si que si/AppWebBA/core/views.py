@@ -12,15 +12,16 @@ import random
 
 def tienda(request):
     list = Producto.objects.all()
+    print(list)
     contexto = {'list' : list}
     return render(request, "core/tienda.html", contexto)
 
 def iniciar_sesion(request):
     return render(request, "core/iniciar_sesion.html")
 
-
-
 def cerrar_sesion(request):
     logout(request)
     return redirect(tienda)
 
+
+    
