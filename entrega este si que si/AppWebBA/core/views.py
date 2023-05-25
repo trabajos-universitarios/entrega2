@@ -53,3 +53,8 @@ def registrar_usuario(request):
     form = RegistrarUsuarioForm()
     return render(request, "core/registrar_usuario.html", context={'form': form})
 
+def mis_compras(request):
+    return render(request, "core/mis_compras.html")
+
+def detalle_factura(request):
+    return render(request, "core/detalle_factura.html")

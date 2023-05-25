@@ -11,6 +11,8 @@ urlpatterns = [
     path('iniciar_sesion/', iniciar_sesion, name="iniciar_sesion"),
     path('cerrar_sesion/', cerrar_sesion, name='cerrar_sesion'),
     path('registrar_usuario/', registrar_usuario, name="registrar_usuario"),
+    path('mis_compras/', mis_compras, name="mis_compras"),
+    path('detalle_factura/', detalle_factura, name="detalle_factura"),
 ]
 
 if settings.DEBUG:

@@ -93,27 +93,27 @@ WSGI_APPLICATION = 'TiendaStark.wsgi.application'
 # }
 
 # DESCOMENTA LA SIGUIENTE CONFIGURACION DE DATABASES SI QUIERES TRABAJAR CON SqLite
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-
-# DESCOMENTA LA SIGUIENTE CONFIGURACION DE DATABASES SI QUIERES TRABAJAR CON Oracle
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.oracle',
-        'NAME': '127.0.0.1:1521/xe',
-        'USER': 'c##ttstark',
-        'PASSWORD': 'ttstark',
-        'TEST': {
-            'USER': 'default_test',
-            'TBLSPACE': 'default_test_tbls',
-            'TBLSPACE_TMP': 'default_test_tbls_tmp',
-        },
-    },
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': path.join(BASE_DIR, 'db.sqlite3'),
+    }
 }
+
+# DESCOMENTA LA SIGUIENTE CONFIGURACION DE DATABASES SI QUIERES TRABAJAR CON Oracle
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.oracle',
+#         'NAME': '127.0.0.1:1521/xe',
+#         'USER': 'c##ttstark',
+#         'PASSWORD': 'ttstark',
+#         'TEST': {
+#             'USER': 'default_test',
+#             'TBLSPACE': 'default_test_tbls',
+#             'TBLSPACE_TMP': 'default_test_tbls_tmp',
+#         },
+#     },
+# }
 
 
 # Password validation
