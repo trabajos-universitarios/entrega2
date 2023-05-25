@@ -12,7 +12,6 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', tienda, name="tienda"),
     path('iniciar_sesion/', iniciar_sesion, name="iniciar_sesion"),
-    path('iniciar_sesion/', iniciar_sesion, name="iniciar_sesion"),
     path('cerrar_sesion/', cerrar_sesion, name='cerrar_sesion'),
 ]
 

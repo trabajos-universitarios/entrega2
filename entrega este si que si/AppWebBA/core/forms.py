@@ -9,3 +9,10 @@ class IniciarSesionForm(Form):
     password = forms.CharField(widget=forms.PasswordInput(), label="Contraseña")
     class Meta:
         fields = ['username', 'password']
+
+class RegistrarUsuarioForm(UserCreationForm):
+    rut = forms.CharField(max_length=80, required=True, label="Rut")
+    direccion = forms.CharField(max_length=80, required=True, label="Dirección")
+    class Meta:
+        model = User
+        fields = ['username', 'first_name', 'last_name', 'email', 'rut', 'direccion']

@@ -38,5 +38,14 @@ def cerrar_sesion(request):
     logout(request)
     return redirect(tienda)
 
-
-    
+def registrar_usuario(request):
+    if request.method == 'POST':
+        form = RegistrarUsuarioForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            rut = request.POST.get("rut")
+            direccion = request.POST.get("direccion")
+            PerfilUsuario.objects.update_or_create(user=user, rut=rut, direccion=direccion)
+            return redirect(iniciar_sesion)
+    form = RegistrarUsuarioForm()
+    return render(request, "core/registrar_usuario.html", context={'form': form})
