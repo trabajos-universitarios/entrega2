@@ -1,7 +1,0 @@
-{
-    "editor.minimap.enabled": false,
-    "terminal.integrated.defaultProfile.windows": "Command Prompt",
-    "files.autoSave": "afterDelay",
-    "python.terminal.activateEnvironment": false,
-    "python.defaultInterpreterPath": "C:\\BuenosAires2023\\BuenosAires_venv\\Scripts\\python.exe"
-}
