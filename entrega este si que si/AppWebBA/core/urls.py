@@ -5,14 +5,12 @@ from .views import *
 from django.conf import settings
 from django.conf.urls.static import static
 
-# ... Tus rutas existentes ...
-
-
 
 urlpatterns = [
     path('', tienda, name="tienda"),
     path('iniciar_sesion/', iniciar_sesion, name="iniciar_sesion"),
     path('cerrar_sesion/', cerrar_sesion, name='cerrar_sesion'),
+    path('registrar_usuario/', registrar_usuario, name="registrar_usuario"),
 ]
 
 if settings.DEBUG:
