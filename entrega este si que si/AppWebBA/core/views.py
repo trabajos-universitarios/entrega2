@@ -45,7 +45,11 @@ def registrar_usuario(request):
             user = form.save()
             rut = request.POST.get("rut")
             direccion = request.POST.get("direccion")
-            PerfilUsuario.objects.update_or_create(user=user, rut=rut, direccion=direccion)
+            nombre = request.POST.get("first_name")
+            apellido = request.POST.get("last_name")
+            correo = request.POST.get("email")
+            PerfilUsuario.objects.update_or_create(user=user, rut=rut, dirusu=direccion, apeusu = apellido, nomusu = nombre, correo = correo, tipousu="Cliente", pwd=123)
             return redirect(iniciar_sesion)
     form = RegistrarUsuarioForm()
     return render(request, "core/registrar_usuario.html", context={'form': form})
+
