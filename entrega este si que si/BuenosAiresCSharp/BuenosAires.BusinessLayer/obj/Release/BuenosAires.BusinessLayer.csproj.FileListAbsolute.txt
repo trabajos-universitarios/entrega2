@@ -1,0 +1,16 @@
+C:\Users\glado\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BusinessLayer\bin\Release\BuenosAires.BusinessLayer.dll
+C:\Users\glado\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BusinessLayer\bin\Release\BuenosAires.BusinessLayer.pdb
+C:\Users\glado\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BusinessLayer\bin\Release\BuenosAires.DataLayer.dll
+C:\Users\glado\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BusinessLayer\bin\Release\BuenosAires.Model.dll
+C:\Users\glado\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BusinessLayer\bin\Release\EntityFramework.dll
+C:\Users\glado\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BusinessLayer\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\glado\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BusinessLayer\bin\Release\BuenosAires.DataLayer.pdb
+C:\Users\glado\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BusinessLayer\bin\Release\BuenosAires.DataLayer.dll.config
+C:\Users\glado\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BusinessLayer\bin\Release\BuenosAires.Model.pdb
+C:\Users\glado\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BusinessLayer\bin\Release\EntityFramework.xml
+C:\Users\glado\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BusinessLayer\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\glado\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BusinessLayer\obj\Release\BuenosAires.BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\glado\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BusinessLayer\obj\Release\BuenosAires.BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\glado\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BusinessLayer\obj\Release\BuenosAires.BusinessLayer.csproj.CopyComplete
+C:\Users\glado\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BusinessLayer\obj\Release\BuenosAires.BusinessLayer.dll
+C:\Users\glado\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.BusinessLayer\obj\Release\BuenosAires.BusinessLayer.pdb

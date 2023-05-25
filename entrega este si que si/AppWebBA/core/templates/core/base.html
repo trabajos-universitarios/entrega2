@@ -20,12 +20,12 @@
         <script>
             $(document).ready(function(){
                 set_nav_li("#tienda", "#", "{% static 'core/img/inicio.png' %}");
-                set_nav_li("#inicio", "#", "{% static 'core/img/tienda.png' %}");
+                set_nav_li("#inicio", "{% url 'tienda' %}", "{% static 'core/img/tienda.png' %}");
                 set_nav_li("#admsis", "#", "{% static 'core/img/cohete.png' %}");
                 set_nav_li("#manpro", "#", "{% static 'core/img/starkind.png' %}");
                 set_nav_li("#regist", "#", "{% static 'core/img/registro.png' %}");
                 set_nav_li("#inises", "#", "{% static 'core/img/login.png' %}");
-                set_nav_li("#cerses", "#", "{% static 'core/img/login.png' %}");
+                set_nav_li("#cerses", "{% url 'cerrar_sesion' %}", "{% static 'core/img/login.png' %}");
                 set_nav_li("#perfil", "#", "{% static 'core/img/profile.png' %}");
                 set_nav_li("#chpass", "#", "{% static 'core/img/password.png' %}");
 
