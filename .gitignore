@@ -6,3 +6,4 @@ __pycache__/
 *_pycache_/
 *.swp
 *.swo
+*.cache
