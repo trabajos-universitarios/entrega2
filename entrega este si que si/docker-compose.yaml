@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  musicapp:
+    container_name: webba
+    build:
+      context: AppWebBA
+    ports: 
+      - '8005:8005'

@@ -71,7 +71,7 @@ def cerrar_sesion(request):
 def ficha(request, id):
     data = {"mesg": "", "aire": None}
     if request.method == "POST":
-        if request.user.is_authenticated and not request.user.is_staff:
+        if request.user.is_authenticated:
             return redirect(iniciar_pago, id)
         else:
             # Si el usuario que hace la compra no ha iniciado sesión,
