@@ -152,8 +152,16 @@ def pago_exitoso(request,id):
         producto = Producto.objects.get(idprod=id)
         resultado = Factura.objects.aggregate(max_id=Max('nrofac'))
         id_mas_alta = resultado['max_id']
+        precio = producto.precio
+        nombre = producto.nomprod
+        rut = PerfilUsuario.objects.get(user_id=request.user.id).rut
+        resultado2 = GuiaDespacho.objects.aggregate(max_id=Max('nrogd'))
+        id_mas_alta2 = resultado['max_id']
+        print(rut)
         fecha_actual = datetime.now().strftime('%Y-%m-%d')
-        #Factura.objects.update_or_create(nrofac=id_mas_alta+1, fechafac=fecha_actual, desc=producto.descprod, idprod = producto.idprod, nomusu = , rutcli = , tipousu=)
+        Factura.objects.update_or_create(nrofac=id_mas_alta+1, fechafac=fecha_actual, descfac=nombre, idprod = producto, monto = precio, rutcli = perfil)
+        factura = Factura.objects.get(nrofac=id_mas_alta+1)
+        GuiaDespacho.objects.update_or_create(nrogd=id_mas_alta2+1, estadogd="EnBodega", idprod = producto, nrofac = factura)
         return render(request, "core/pago_exitoso.html", context)
     else:
         return redirect(tienda)
