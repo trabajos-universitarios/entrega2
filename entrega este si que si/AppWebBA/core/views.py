@@ -18,6 +18,33 @@ def tienda(request):
     contexto = {'list' : list}
     return render(request, "core/tienda.html", contexto)
 
+def perfil_usuario(request):
+    data = {"mesg": "", "form": PerfilUsuarioForm}
+
+    if request.method == 'POST':
+        form = PerfilUsuarioForm(request.POST)
+        if form.is_valid():
+            user = request.user
+            user.first_name = request.POST.get("first_name")
+            user.last_name = request.POST.get("last_name")
+            user.email = request.POST.get("email")
+            user.save()
+            perfil = PerfilUsuario.objects.get(user=user)
+            perfil.rut = request.POST.get("rut")
+            perfil.direccion = request.POST.get("direccion")
+            perfil.save()
+            data["mesg"] = "¡Sus datos fueron actualizados correctamente!"
+
+    perfil = PerfilUsuario.objects.get(user=request.user)
+    form = PerfilUsuarioForm()
+    form.fields['first_name'].initial = request.user.first_name
+    form.fields['last_name'].initial = request.user.last_name
+    form.fields['email'].initial = request.user.email
+    form.fields['rut'].initial = perfil.rut
+    form.fields['direccion'].initial = perfil.direccion
+    data["form"] = form
+    return render(request, "core/perfil_usuario.html", data)
+
 def iniciar_sesion(request):
     data = {"mesg": "", "form": IniciarSesionForm()}
     if request.method == "POST":

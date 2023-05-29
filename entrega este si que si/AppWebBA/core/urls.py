@@ -16,6 +16,7 @@ urlpatterns = [
     path('ficha/<id>', ficha, name="ficha"),
     path('iniciar_pago/<id>', iniciar_pago, name="iniciar_pago"),
     path('pago_exitoso/<id>', pago_exitoso, name="pago_exitoso"),
+    path('perfil_usuario/', perfil_usuario, name="perfil_usuario"),
 ]
 
 if settings.DEBUG:
