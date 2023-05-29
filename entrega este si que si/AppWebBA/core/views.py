@@ -183,12 +183,13 @@ def pago_exitoso(request,id):
         nombre = producto.nomprod
         rut = PerfilUsuario.objects.get(user_id=request.user.id).rut
         resultado2 = GuiaDespacho.objects.aggregate(max_id=Max('nrogd'))
-        id_mas_alta2 = resultado['max_id']
+        id_mas_alta2 = resultado2['max_id']
         print(rut)
         fecha_actual = datetime.now().strftime('%Y-%m-%d')
-        Factura.objects.update_or_create(nrofac=id_mas_alta+1, fechafac=fecha_actual, descfac=nombre, idprod = producto, monto = precio, rutcli = perfil)
-        factura = Factura.objects.get(nrofac=id_mas_alta+1)
-        GuiaDespacho.objects.update_or_create(nrogd=id_mas_alta2+1, estadogd="EnBodega", idprod = producto, nrofac = factura)
+        if response['response_code'] == 0:
+            Factura.objects.update_or_create(nrofac=id_mas_alta+1, fechafac=fecha_actual, descfac=nombre, idprod = producto, monto = precio, rutcli = perfil)
+            factura = Factura.objects.get(nrofac=id_mas_alta+1)
+            GuiaDespacho.objects.update_or_create(nrogd=id_mas_alta2+1, estadogd="EnBodega", idprod = producto, nrofac = factura)
         return render(request, "core/pago_exitoso.html", context)
     else:
         return redirect(tienda)
@@ -210,7 +211,10 @@ def registrar_usuario(request):
     return render(request, "core/registrar_usuario.html", context={'form': form})
 
 def mis_compras(request):
-    return render(request, "core/mis_compras.html")
+    rut = PerfilUsuario.objects.get(user_id=request.user.id).rut
+    list = Factura.objects.filter(rutcli=rut)
+    context = {'fac' : list}
+    return render(request, "core/mis_compras.html", context)
 
 def detalle_factura(request):
     return render(request, "core/detalle_factura.html")
