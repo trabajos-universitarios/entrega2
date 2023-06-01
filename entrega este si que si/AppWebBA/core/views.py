@@ -213,7 +213,9 @@ def registrar_usuario(request):
 def mis_compras(request):
     rut = PerfilUsuario.objects.get(user_id=request.user.id).rut
     list = Factura.objects.filter(rutcli=rut)
-    context = {'fac' : list}
+    facturas = Factura.objects.filter(rutcli=rut)
+    guias_despacho = GuiaDespacho.objects.filter(nrofac__in=facturas)
+    context = {'fac' : list, 'gi' : guias_despacho}
     return render(request, "core/mis_compras.html", context)
 
 def detalle_factura(request):

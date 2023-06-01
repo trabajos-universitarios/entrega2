@@ -57,10 +57,10 @@
 						</thead>
 						<tbody>
 							<tr>
-								{% for pro in fac %}
-								<th>{{pro.nrofac}}</th>
-								<th>{{pro.fechafac}}</th>
-								<th>{{pro.monto}}</th>
+								{% for pro in gi %}
+								<th>{{pro.nrofac.nrofac}}</th>
+								<th>{{pro.nrofac.fechafac}}</th>
+								<th>${{pro.nrofac.monto}}</th>
 								<th>{{pro.estadogd}}</th>
 								<th><a href="#">Ver detalle</a></th>
 								{% endfor %}
