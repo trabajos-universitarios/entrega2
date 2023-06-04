@@ -5,3 +5,35 @@
     <link href="{% static 'core/css/forms.css'%}" rel="stylesheet">
 {% endblock %}
 
+{% block content %}
+<div class="container">
+    <h1>Detalle de Factura</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Número de Factura: {{factura.nrofac}}</h3>
+            <p>Fecha de Factura: {{ factura.fechafac }}</p>
+            <p>RUT Cliente: {{ factura.rutcli }}</p>
+            <p>Estado de Despacho: {{ guia.estadogd }}</p>
+        </div>
+        <div class="col-md-6">
+            <h3>Productos</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID Producto</th>
+                        <th>Nombre Producto</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td>{{ factura.idprod.idprod }}</td>
+                            <td>{{ factura.descfac }}</td>
+                            <td>{{ factura.monto }}</td>
+                        </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock content %}

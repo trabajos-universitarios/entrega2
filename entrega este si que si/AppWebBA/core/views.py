@@ -13,8 +13,8 @@ from django.db.models import Max
 from datetime import datetime
 from django.db import connection
 import requests
+from django.shortcuts import get_object_or_404
 
-import requests
 
 def tienda(request):
     lista_productos = Producto.objects.all()
@@ -92,18 +92,6 @@ def cerrar_sesion(request):
     logout(request)
     return redirect(tienda)
 
-
-def obtener_valor_usd():
-    url = 'https://api.exchangerate-api.com/v4/latest/CLP'
-    try:
-        response = requests.get(url)
-        if response.status_code == 200:
-            datos = response.json()
-            valor_usd = datos['rates']['USD']
-            return valor_usd
-    except:
-        pass
-    return 0
 
 
 @csrf_exempt
@@ -270,8 +258,11 @@ def mis_compras(request):
     context = {'fac' : list, 'gi' : guias_despacho}
     return render(request, "core/mis_compras.html", context)
 
-def detalle_factura(request):
-    return render(request, "core/detalle_factura.html")
+def detalle_factura(request,id):
+    factura = get_object_or_404(Factura, nrofac=id)
+    guia_despacho = GuiaDespacho.objects.filter(nrofac=factura)
+    context = {'factura': factura, 'guia': guia_despacho}
+    return render(request, "core/detalle_factura.html",context)
 
 
 @csrf_exempt
