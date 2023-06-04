@@ -21,8 +21,14 @@ class PerfilUsuarioForm(Form):
     first_name = forms.CharField(max_length=150, required=True, label="Nombres")
     last_name = forms.CharField(max_length=150, required=True, label="Apellidos")
     email = forms.CharField(max_length=254, required=True, label="Correo")
-    rut = forms.CharField(max_length=80, required=False, label="Rut")
-    direccion = forms.CharField(max_length=80, required=False, label="Dirección")
+    rut = forms.CharField(max_length=20, required=False, label="Rut")
+    tipousu = forms.CharField(max_length=50, required=True, label="Tipo de usuario")
+    dirusu = forms.CharField(max_length=300, required=False, label="Dirección")
 
     class Meta:
         fields = '__all__'
+
+class ProductoForm(ModelForm):
+    class Meta:
+        model = Producto
+        fields = ['idprod', 'nomprod', 'descprod', 'precio', 'imagen']

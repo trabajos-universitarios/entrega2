@@ -92,7 +92,7 @@ DATABASES = {
         'NAME': 'base_datos',
         'USER': 'sa',
         'PASSWORD': 'DuocBuenosAires123',
-        'HOST': '170.239.85.119',
+        'HOST': 'conexion.sofiawisdom.cl',
         'PORT': '',
         'OPTIONS': {
             'driver': 'ODBC Driver 17 for SQL Server',

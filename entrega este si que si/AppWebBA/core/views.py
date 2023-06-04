@@ -11,12 +11,35 @@ from transbank.webpay.webpay_plus.transaction import Transaction, WebpayOptions
 import random
 from django.db.models import Max
 from datetime import datetime
+from django.db import connection
+import requests
+
+import requests
 
 def tienda(request):
-    list = Producto.objects.all()
-    print(list)
-    contexto = {'list' : list}
+    lista_productos = Producto.objects.all()
+    
+    for producto in lista_productos:
+        precio_en_pesos = producto.precio  # Supongamos que el precio está en pesos
+        respuesta = requests.get("https://api.exchangeratesapi.io/latest?base=MXN&symbols=USD")
+        
+        if respuesta.status_code == 200:
+            datos = respuesta.json()
+            
+            if 'rates' in datos and 'USD' in datos['rates']:
+                tasa_cambio = datos['rates']['USD']
+                precio_en_dolares = precio_en_pesos / tasa_cambio
+            else:
+                precio_en_dolares = 0  # O establece un valor predeterminado si no se puede obtener la tasa de cambio
+        else:
+            precio_en_dolares = 0  # O establece un valor predeterminado si no se puede obtener la respuesta de la API
+        
+        producto.precio_en_dolares = precio_en_dolares
+    
+    contexto = {'list': lista_productos}
     return render(request, "core/tienda.html", contexto)
+
+
 
 def perfil_usuario(request):
     data = {"mesg": "", "form": PerfilUsuarioForm}
@@ -31,7 +54,8 @@ def perfil_usuario(request):
             user.save()
             perfil = PerfilUsuario.objects.get(user=user)
             perfil.rut = request.POST.get("rut")
-            perfil.direccion = request.POST.get("direccion")
+            perfil.tipousu = request.POST.get("tipousu")
+            perfil.dirusu = request.POST.get("dirusu")
             perfil.save()
             data["mesg"] = "¡Sus datos fueron actualizados correctamente!"
 
@@ -41,7 +65,8 @@ def perfil_usuario(request):
     form.fields['last_name'].initial = request.user.last_name
     form.fields['email'].initial = request.user.email
     form.fields['rut'].initial = perfil.rut
-    form.fields['direccion'].initial = perfil.direccion
+    form.fields['tipousu'].initial = perfil.tipousu
+    form.fields['dirusu'].initial = perfil.dirusu
     data["form"] = form
     return render(request, "core/perfil_usuario.html", data)
 
@@ -220,3 +245,42 @@ def mis_compras(request):
 
 def detalle_factura(request):
     return render(request, "core/detalle_factura.html")
+
+
+@csrf_exempt
+def administrar_productos(request, action, id):
+    if not (request.user.is_authenticated and request.user.is_staff):
+        return redirect(tienda)
+
+    data = {"mesg": "", "form": ProductoForm, "action": action, "id": id, "formsesion": IniciarSesionForm}
+
+    if action == 'ins':
+        if request.method == "POST":
+            form = ProductoForm(request.POST, request.FILES)
+            if form.is_valid:
+                try:
+                    form.save()
+                    data["mesg"] = "¡El producto fue creado correctamente!"
+                except:
+                    data["mesg"] = "¡No se puede crear dos vehículos con el mismo ID!"
+
+    elif action == 'upd':
+        objeto = Producto.objects.get(idprod=id)
+        if request.method == "POST":
+            form = ProductoForm(data=request.POST, files=request.FILES, instance=objeto)
+            if form.is_valid:
+                form.save()
+                data["mesg"] = "¡El producto fue actualizado correctamente!"
+        data["form"] = ProductoForm(instance=objeto)
+
+    elif action == 'del':
+        try:
+            Producto.objects.get(idprod=id).delete()
+            data["mesg"] = "¡El producto fue eliminado correctamente!"
+            return redirect(administrar_productos, action='ins', id = '-1')
+        except:
+            data["mesg"] = "¡El producto ya estaba eliminado!"
+
+    data["list"] = Producto.objects.all().order_by('idprod')
+    return render(request, "core/administrar_productos.html", data)
+
