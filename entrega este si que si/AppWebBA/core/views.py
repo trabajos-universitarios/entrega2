@@ -92,6 +92,20 @@ def cerrar_sesion(request):
     logout(request)
     return redirect(tienda)
 
+
+def obtener_valor_usd():
+    url = 'https://api.exchangerate-api.com/v4/latest/CLP'
+    try:
+        response = requests.get(url)
+        if response.status_code == 200:
+            datos = response.json()
+            valor_usd = datos['rates']['USD']
+            return valor_usd
+    except:
+        pass
+    return 0
+
+
 @csrf_exempt
 def ficha(request, id):
     data = {"mesg": "", "aire": None}
@@ -99,16 +113,29 @@ def ficha(request, id):
         if request.user.is_authenticated:
             return redirect(iniciar_pago, id)
         else:
-            # Si el usuario que hace la compra no ha iniciado sesión,
-            # entonces se le envía un mensaje en la pagina para indicarle
-            # que primero debe iniciar sesion antes de comprar
             data["mesg"] = "¡Para poder comprar debe iniciar sesión como cliente!"
 
-    # Si visitamos la URL de FICHA y la pagina no nos envia un METODO POST, 
-    # quiere decir que solo debemos fabricar la pagina y devolvera al browser
-    # para que se muestren los datos de la FICHA
-    data["aire"] = Producto.objects.get(idprod=id)
+    aire = Producto.objects.get(idprod=id)
+
+    # Hacer una solicitud a la API para obtener la tasa de cambio de CLP a USD
+    api_url = "https://api.exchangerate-api.com/v4/latest/CLP"
+    response = requests.get(api_url)
+    
+    if response.status_code == 200:
+        exchange_data = response.json()
+        exchange_rate = exchange_data["rates"]["USD"]
+    else:
+        # Si no se puede obtener la tasa de cambio de la API, establecer un valor predeterminado
+        exchange_rate = 1.0
+    
+    # Calcular el precio en USD
+    precio_usd = aire.precio * exchange_rate
+    
+    data["aire"] = aire
+    data["precio_usd"] = precio_usd
+    
     return render(request, "core/ficha.html", data)
+
 
 #https://www.transbankdevelopers.cl/documentacion/como_empezar#como-empezar
 #https://www.transbankdevelopers.cl/documentacion/como_empezar#codigos-de-comercio
@@ -283,4 +310,3 @@ def administrar_productos(request, action, id):
 
     data["list"] = Producto.objects.all().order_by('idprod')
     return render(request, "core/administrar_productos.html", data)
-
