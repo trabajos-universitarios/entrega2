@@ -1,0 +1,32 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block stylesheet %}
+    <link href="{% static 'core/css/forms.css'%}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-center">Crear Solicitud </h1>
+    <form method="POST" class="text-center">
+      {% csrf_token %}
+      <div class="form-group d-flex flex-column">
+        <label for="{{ form.tipo.id_for_label }}">Tipo de Solicitud</label>
+        {{ form.tipo }}
+      </div>
+      <div class="form-group d-flex flex-column">
+        <label for="{{ form.fecha.id_for_label }}">Fecha de visita</label>
+        <input type="date" id="start" name="fecha"
+       value="2018-07-22"
+       min="2023-01-01" >
+      </div>
+      <div class="form-group d-flex flex-column">
+        <label for="{{ form.desc.id_for_label }}">Descripción</label>
+        {{ form.desc }}
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </div>
+  
+  
+{% endblock content %}

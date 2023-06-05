@@ -5,4 +5,5 @@ admin.site.register(Producto)
 admin.site.register(PerfilUsuario)
 admin.site.register(GuiaDespacho)
 admin.site.register(Factura)
+admin.site.register(SolicitudServicio)
 

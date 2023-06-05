@@ -19,6 +19,7 @@ urlpatterns = [
     path('perfil_usuario/', perfil_usuario, name="perfil_usuario"),
     path('administrar_productos/<action>/<id>', administrar_productos, name="administrar_productos"),
     path('cambiar_password/', auth_views.PasswordChangeView.as_view(template_name='core/cambiar_password.html', success_url='/password_cambiada'), name='cambiar_password'),
+    path('crear_solicitud/<id>',solicitud_form , name="crear_solicitud"),
 ]
 
 if settings.DEBUG:

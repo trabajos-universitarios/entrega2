@@ -14,6 +14,7 @@ from datetime import datetime
 from django.db import connection
 import requests
 from django.shortcuts import get_object_or_404
+from django.db.models import Count
 
 
 def tienda(request):
@@ -301,3 +302,25 @@ def administrar_productos(request, action, id):
 
     data["list"] = Producto.objects.all().order_by('idprod')
     return render(request, "core/administrar_productos.html", data)
+
+def solicitud_form(request,id):
+    fecha_actual = datetime.now().strftime('%Y-%m-%d')
+    tecnico_menos_solicitudes = PerfilUsuario.objects.filter(tipousu='Técnico').annotate(num_solicitudes=Count('solicitudservicio')).order_by('num_solicitudes').first()
+    factura = Factura.objects.get(nrofac=id)
+    print(tecnico_menos_solicitudes)
+    perfil = PerfilUsuario.objects.get(user=request.user)
+    resultado = SolicitudServicio.objects.aggregate(max_id=Max('nrosol'))
+    id_mas_alta = resultado['max_id']
+    if request.method == 'POST':
+        form = Solicitud(request.POST)
+        if form.is_valid():
+            tipo = request.POST.get("tipo")
+            desc = request.POST.get("desc")
+            fecha = request.POST.get("fecha")
+            SolicitudServicio.objects.update_or_create( nrofac=factura, estadosol="Pendiente", descsol = desc, fechavisita = fecha, tiposol = tipo,nrosol = id_mas_alta+1,ruttec = tecnico_menos_solicitudes)
+            form = Solicitud()
+            return render(request, 'core/crear_solicitud.html', {'form': form})
+    else:
+        form = Solicitud()
+
+    return render(request, 'core/crear_solicitud.html', {'form': form})

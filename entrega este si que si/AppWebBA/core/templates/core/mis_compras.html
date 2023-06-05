@@ -64,7 +64,7 @@
 								<th>${{pro.nrofac.monto}}</th>
 								<th>{{pro.estadogd}}</th>
 								<th><a href="{% url 'detalle_factura' pro.nrofac.nrofac %}">Ver detalle</a></th>
-								<th><a href="{% url 'detalle_factura' pro.nrofac.nrofac %}">Crear Solicitud</a></th>
+								<th><a href="{% url 'crear_solicitud' pro.nrofac.nrofac %}">Crear Solicitud</a></th>
 								{% endfor %}
 							</tr>
 						</tbody>

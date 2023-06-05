@@ -37,9 +37,9 @@ class Solicitud(forms.Form):
     CHOICES = [('Instalación', 'Instalación'), ('Mantención', 'Mantención'), ('Reparación', 'Reparación')]
     tipo = forms.ChoiceField(choices=CHOICES,widget=forms.Select(
     attrs={'class':'form-select', 'name': 'tipo','placeholder':'tipo:'}),
-    label='')
+    label='Tipo solicitud')
+    desc = forms.CharField(label='Descripcion', widget=forms.Textarea)
     class Meta:
-        model = SolicitudServicio
-        fields = ['tipo']
+        fields = ['tipo','desc','fecha']
         widgets = {'tipo': forms.TextInput(attrs={'class': 'form-control'})
                     }
