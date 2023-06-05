@@ -32,3 +32,14 @@ class ProductoForm(ModelForm):
     class Meta:
         model = Producto
         fields = ['idprod', 'nomprod', 'descprod', 'precio', 'imagen']
+
+class Solicitud(forms.Form):
+    CHOICES = [('Instalación', 'Instalación'), ('Mantención', 'Mantención'), ('Reparación', 'Reparación')]
+    tipo = forms.ChoiceField(choices=CHOICES,widget=forms.Select(
+    attrs={'class':'form-select', 'name': 'tipo','placeholder':'tipo:'}),
+    label='')
+    class Meta:
+        model = SolicitudServicio
+        fields = ['tipo']
+        widgets = {'tipo': forms.TextInput(attrs={'class': 'form-control'})
+                    }
