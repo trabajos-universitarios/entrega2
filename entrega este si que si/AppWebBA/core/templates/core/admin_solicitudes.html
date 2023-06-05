@@ -1,0 +1,55 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block stylesheet %}
+    <link href="{% static 'core/css/forms.css'%}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}	
+		
+<div class="container">
+    <div class="row tituloDetaller">
+        <div class="span7">
+            <h4><span class="text">Mis solicitudes</span></h4>
+        </div>
+    </div>
+    <div class="tabla">
+        <div class="col">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Nro SS</th>
+                        <th>Cliente</th>
+                        <th>Tipo SS</th>
+                        <th>Fecha Visita</th>
+                        <th>Técnico</th>
+                        <th>Descripción</th>
+                        <th>Estado SS</th>
+                        <th>Editar</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for pro in soli %}
+                    <tr>
+                        <td>{{ pro.nrosol }}</td>
+                        <td>{{ pro.nrofac.rutcli.nomusu }} {{ pro.nrofac.rutcli.apeusu }}</td>
+                        <td>{{ pro.tiposol }}</td>
+                        <td>{{ pro.fechavisita }}</td>
+                        <td>{{ pro.ruttec.nomusu }} {{ pro.ruttec.apeusu }}</td>
+                        <td>{{ pro.descsol }}</td>
+                        <td>{{ pro.estadosol }}</td>
+                        <td><a href="#" 
+                            class="btn btn-primary btn-sm boton_chico">Editar</a></td>
+                        <td><a href="{% url 'eliminar_solicitudes' pro.nrosol%}" 
+                            class="btn btn-danger btn-sm boton_chico">Eliminar</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}

@@ -43,7 +43,6 @@
                 <ul class="list-inline">
                     <!-- inicio menú para usuarios anónimos -->
                     <li id="tienda">Inicio</li>
-                    <li id="inicio">Mis compras</li>    
                     
                     <!-- fin menú para usuarios anónimos -->
 
@@ -68,6 +67,7 @@
                     {% endif %}
 
                     {% if user.is_authenticated and permiso == 'Cliente' %}
+                    <li id="inicio">Mis compras</li>    
                     <li id="missol">Mis solicitudes</li>
                     {% endif %}
                     

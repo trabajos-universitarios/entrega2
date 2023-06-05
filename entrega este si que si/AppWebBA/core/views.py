@@ -330,3 +330,13 @@ def mis_solicitudes(request):
     solicitudes = SolicitudServicio.objects.filter(nrofac__rutcli__user=request.user)
     context = {'soli': solicitudes}
     return render(request, 'core/mis_solicitudes.html', context)
+
+def solicitudes_administrador(request):
+    solicitudes = SolicitudServicio.objects.all()
+    context = {'soli': solicitudes}
+    return render(request, 'core/admin_solicitudes.html', context)
+
+def eliminar_solicitudes(request,id):
+    modelo = get_object_or_404(SolicitudServicio, nrosol=id)
+    modelo.delete()
+    return redirect(solicitudes_administrador)
