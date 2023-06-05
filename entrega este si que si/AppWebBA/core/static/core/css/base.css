@@ -17,6 +17,15 @@ h1 {
     color: rgb(0, 0, 0) !important;
 }
 
+a {
+    color: black !important;
+}
+
+a:hover {
+  color: #badcee !important;
+  text-decoration: underline;
+}
+
 .nav_item_text {
     font-weight: bold;
 }
