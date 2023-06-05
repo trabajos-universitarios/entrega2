@@ -5,7 +5,7 @@ from django.contrib.auth.forms import UserCreationForm
 from .models import *
 
 class IniciarSesionForm(Form):
-    username = forms.CharField(widget=forms.TextInput(), label="Correo")
+    username = forms.CharField(widget=forms.TextInput(), label="Usuario")
     password = forms.CharField(widget=forms.PasswordInput(), label="Contraseña")
     class Meta:
         fields = ['username', 'password']
