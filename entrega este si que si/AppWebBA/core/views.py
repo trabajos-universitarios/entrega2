@@ -324,3 +324,9 @@ def solicitud_form(request,id):
         form = Solicitud()
 
     return render(request, 'core/crear_solicitud.html', {'form': form})
+
+
+def mis_solicitudes(request):
+    solicitudes = SolicitudServicio.objects.filter(nrofac__rutcli__user=request.user)
+    context = {'soli': solicitudes}
+    return render(request, 'core/mis_solicitudes.html', context)

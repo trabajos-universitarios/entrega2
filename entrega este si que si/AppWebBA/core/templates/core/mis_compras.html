@@ -6,88 +6,40 @@
 {% endblock %}
 
 {% block content %}
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>Shopper</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="">
-		<!--[if ie]><meta content='IE=8' http-equiv='X-UA-Compatible'/><![endif]-->
-		<!-- bootstrap -->
-		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">      
-		<link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
-		
-		<link href="themes/css/bootstrappage.css" rel="stylesheet"/>
-		
-		<!-- global styles -->
-		<link href="themes/css/flexslider.css" rel="stylesheet"/>
-		<link href="themes/css/main.css" rel="stylesheet"/>
-
-		<!-- scripts -->
-		<script src="themes/js/jquery-1.7.2.min.js"></script>
-		<script src="bootstrap/js/bootstrap.min.js"></script>				
-		<script src="themes/js/superfish.js"></script>	
-		<script src="themes/js/jquery.scrolltotop.js"></script>
-		<!--[if lt IE 9]>			
-			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-			<script src="js/respond.min.js"></script>
-		<![endif]-->
-        <link rel="icon" type="image/png" href="themes/images/logo.png">
-	</head>
-    <body>		
-		
-		<div class="container">
-			<div class="row tituloDetaller">
-				<div class="span7">
-					<h4><span class="text">Mis compras</span></h4>
-				</div>
-			</div>
-			<div class="tabla">
-				<div class="col">
-					<table class="table table-bordered">
-						<thead>
-							<tr>
-								<th>Nro Factura</th>
-								<th>Fecha</th>
-								<th>Monto Total</th>
-								<th>Estado Actual</th>
-								<th>Opciones</th>
-								<th>Crear Solicitud</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								{% for pro in gi %}
-								<th>{{pro.nrofac.nrofac}}</th>
-								<th>{{pro.nrofac.fechafac}}</th>
-								<th>${{pro.nrofac.monto}}</th>
-								<th>{{pro.estadogd}}</th>
-								<th><a href="{% url 'detalle_factura' pro.nrofac.nrofac %}">Ver detalle</a></th>
-								<th><a href="{% url 'crear_solicitud' pro.nrofac.nrofac %}">Crear Solicitud</a></th>
-								{% endfor %}
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
+<div class="container">
+	<div class="row tituloDetaller">
+		<div class="span7">
+			<h4><span class="text">Mis compras</span></h4>
 		</div>
-		<script src="themes/js/common.js"></script>
-		<script src="themes/js/jquery.flexslider-min.js"></script>
-		<script type="text/javascript">
-			$(function() {
-				$(document).ready(function() {
-					$('.flexslider').flexslider({ 
-						animation: "fade",
-						slideshowSpeed: 4000,
-						animationSpeed: 600,
-						controlNav: false,
-						directionNav: true,
-						controlsContainer: ".flex-container" // the container that holds the flexslider
-					});
-				});
-			});
-		</script>
-    </body>
-</html>
+	</div>
+	<div class="tabla">
+		<div class="col">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>Nro Factura</th>
+						<th>Fecha</th>
+						<th>Monto Total</th>
+						<th>Estado Actual</th>
+						<th>Opciones</th>
+						<th>Crear Solicitud</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for pro in gi %}
+					<tr>
+						<td>{{ pro.nrofac.nrofac }}</td>
+						<td>{{ pro.nrofac.fechafac }}</td>
+						<td>${{ pro.nrofac.monto }}</td>
+						<td>{{ pro.estadogd }}</td>
+						<td><a href="{% url 'detalle_factura' pro.nrofac.nrofac %}">Ver detalle</a></td>
+						<td><a href="{% url 'crear_solicitud' pro.nrofac.nrofac %}">Crear Solicitud</a></td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
 {% endblock content %}
