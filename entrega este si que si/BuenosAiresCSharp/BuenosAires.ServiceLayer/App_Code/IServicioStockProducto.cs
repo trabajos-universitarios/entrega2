@@ -34,4 +34,23 @@ public interface IServicioStockProducto
 
 	[OperationContract]
 	Respuesta LeerTodosEnJson();
+
+	[OperationContract]
+	Respuesta ProductosLeerTodosEnJson();
+
+	[OperationContract]
+	Respuesta PerfilUsuarioLeerTodos();
+
+	[OperationContract]
+	Respuesta VerificarPassword(string cuenta, string password);
+	
+	[OperationContract]
+	Respuesta Reservar(string nroserieanwo);
+	
+	[OperationContract]
+	Respuesta LeerTodosAnwoListaProducto();
+	
+	[OperationContract]
+	Respuesta MetodoAuxiliar(AnwoListaProducto anwoListaProducto);
+
 }

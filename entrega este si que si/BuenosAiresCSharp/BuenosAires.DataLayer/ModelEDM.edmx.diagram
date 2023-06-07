@@ -5,6 +5,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="57eb217ad9df4e1e87aafa1ed255f29a" Name="Diagram1">
+        <EntityTypeShape EntityType="BuenosAiresModel.AnwoListaProducto" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="BuenosAiresModel.auth_group" Width="1.5" PointX="0.75" PointY="11.875" IsExpanded="true" />
         <EntityTypeShape EntityType="BuenosAiresModel.auth_group_permissions" Width="1.5" PointX="6" PointY="6.625" IsExpanded="true" />
         <EntityTypeShape EntityType="BuenosAiresModel.auth_permission" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />

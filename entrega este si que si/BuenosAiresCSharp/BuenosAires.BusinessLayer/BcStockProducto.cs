@@ -15,6 +15,7 @@ namespace BuenosAires.BusinessLayer
         public bool HayErrores = false;
         public StockProducto StockProducto = null;
         public List<StockProducto> Lista = null;
+        public List<StockProductoConEstado> ListaConEstados = null;
 
         public BcStockProducto()
         {
@@ -28,6 +29,7 @@ namespace BuenosAires.BusinessLayer
             this.HayErrores = false;
             this.StockProducto = new StockProducto();
             this.Lista = new List<StockProducto>();
+            this.ListaConEstados = new List<StockProductoConEstado>();
         }
 
         public void CopiarPropiedades(DcStockProducto dc)
@@ -37,6 +39,7 @@ namespace BuenosAires.BusinessLayer
             this.HayErrores = dc.HayErrores;
             this.StockProducto = dc.StockProducto;
             this.Lista = dc.Lista;
+            this.ListaConEstados = dc.ListaConEstados;
         }
 
         public bool RetornarError(string mensaje)

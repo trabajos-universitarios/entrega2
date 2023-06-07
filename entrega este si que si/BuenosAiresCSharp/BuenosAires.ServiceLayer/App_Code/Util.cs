@@ -107,110 +107,63 @@ public static class Util
         return true;
     }
 
-    //public static string SerializarObjetoEnXML<T>(T objeto)
-    //{
-    //    if (objeto == null) return null;
-    //    var rootElement = new XElement(typeof(T).Name);
-    //    var properties = typeof(T).GetProperties();
-    //    foreach (var property in properties)
-    //    {
-    //        if (property.PropertyType.IsGenericType && (property.PropertyType.GetGenericTypeDefinition() == typeof(ICollection<>) || property.PropertyType.GetGenericTypeDefinition() == typeof(List<>)))
-    //        {
-    //            continue;
-    //        }
+    public static string PonerPuntoFinal(string texto)
+    {
+        texto = texto.Trim();
+        if (texto != "")
+        {
+            if (!texto.EndsWith("."))
+            {
+                return texto + ".";
+            }
+        }
+        return texto;
+    }
 
-    //        object value = null;
+    public static string MensajeError(string mensajeGeneral, Exception ex)
+    {
+        var mensajeError = "";
 
-    //        try
-    //        {
-    //            value = property.GetValue(objeto);
-    //        }
-    //        catch (Exception)
-    //        {
-    //            continue;
-    //        }
+        if (mensajeGeneral.Trim() != "")
+        {
+            mensajeError += PonerPuntoFinal(mensajeGeneral);
+        }
 
-    //        if (value != null)
-    //        {
-    //            var elementValue = Convert.ToString(value);
-    //            if (!string.IsNullOrEmpty(elementValue))
-    //            {
-    //                var element = new XElement(property.Name, elementValue);
-    //                rootElement.Add(element);
-    //            }
-    //        }
-    //    }
-    //    return rootElement.ToString().Replace("&lt;", "<").Replace("&gt;", ">"); ;
-    //}
+        if (ex != null)
+        {
+            if (ex.Message.Trim() != "")
+            {
+                if (mensajeError == "")
+                {
+                    mensajeError = PonerPuntoFinal(ex.Message);
+                }
+                else
+                {
+                    mensajeError += " " + PonerPuntoFinal(ex.Message);
+                }
+            }
 
-    //public static string SerializarListaEnXML<T>(List<T> lista)
-    //{
-    //    if (lista == null) return null;
-    //    var rootElement = new XElement(typeof(T).Name + "s");
-    //    foreach (var item in lista)
-    //    {
-    //        var element = SerializarObjetoEnXML(item);
-    //        rootElement.Add(element);
-    //    }
-    //    return rootElement.ToString().Replace("&lt;", "<").Replace("&gt;", ">"); ;
-    //}
+            if (ex.InnerException != null)
+            {
+                if (mensajeError == "")
+                {
+                    mensajeError = PonerPuntoFinal(ex.InnerException.Message);
+                }
+                else
+                {
+                    mensajeError += " " + PonerPuntoFinal(ex.InnerException.Message);
+                }
+            }
+        }
 
-    //public static T DeserializarObjetoDesdeXML<T>(string xmlString)
-    //{
-    //    if (string.IsNullOrEmpty(xmlString))
-    //    {
-    //        return default(T);
-    //    }
-    //    xmlString = xmlString.Replace("&lt;", "<").Replace("&gt;", ">");
-    //    XmlDocument xmlDoc = new XmlDocument();
-    //    xmlDoc.LoadXml(xmlString);
-    //    XmlElement root = xmlDoc.DocumentElement;
-    //    T result = Activator.CreateInstance<T>();
-    //    PropertyInfo[] properties = typeof(T).GetProperties();
-    //    foreach (XmlNode node in root.ChildNodes)
-    //    {
-    //        PropertyInfo property = properties.FirstOrDefault(p => p.Name == node.Name);
-    //        if (property != null)
-    //        {
-    //            Type propertyType = property.PropertyType;
-    //            if (propertyType.IsGenericType && propertyType.GetGenericTypeDefinition() == typeof(List<>))
-    //            {
-    //                Type itemType = propertyType.GetGenericArguments()[0];
-    //                var list = (IList)Activator.CreateInstance(typeof(List<>).MakeGenericType(itemType));
-    //                foreach (XmlNode itemNode in node.ChildNodes)
-    //                {
-    //                    object item = Activator.CreateInstance(itemType);
-    //                    foreach (XmlNode itemPropertyNode in itemNode.ChildNodes)
-    //                    {
-    //                        PropertyInfo itemProperty = itemType.GetProperty(itemPropertyNode.Name);
-    //                        if (itemProperty != null)
-    //                        {
-    //                            object itemValue = Convert.ChangeType(itemPropertyNode.InnerText, itemProperty.PropertyType);
-    //                            itemProperty.SetValue(item, itemValue);
-    //                        }
-    //                    }
-    //                    list.Add(item);
-    //                }
-    //                property.SetValue(result, list);
-    //            }
-    //            else
-    //            {
-    //                object value = Convert.ChangeType(node.InnerText, propertyType);
-    //                property.SetValue(result, value);
-    //            }
-    //        }
-    //    }
-    //    return result;
-    //}
-
-    //public static List<T> DeserializarListaDesdeXML<T>(string xml, string nombreElementoRaiz)
-    //{
-    //    xml = xml.Replace("&lt;", "<").Replace("&gt;", ">");
-    //    XmlSerializer serializer = new XmlSerializer(typeof(List<T>), new XmlRootAttribute(nombreElementoRaiz));
-    //    using (StringReader reader = new StringReader(xml))
-    //    {
-    //        return (List<T>)serializer.Deserialize(reader);
-    //    }
-    //}
+        if (mensajeError == "")
+        {
+            return "ERROR: Comuníquese con el Administrador del Sistema.";
+        }
+        else
+        {
+            return mensajeError + " Comuníquese con el Administrador del Sistema.";
+        }
+    }
 
 }

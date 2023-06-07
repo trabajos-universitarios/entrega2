@@ -16,7 +16,7 @@ namespace BuenosAires.VentaBA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new VentanaStockProducto());
+            Application.Run(new VentanaLogin());
         }
     }
 }

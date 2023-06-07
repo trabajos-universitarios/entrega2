@@ -27,13 +27,41 @@ namespace BuenosAires.VentaBA
             DgvProducto.Columns.AddRange(new DataGridViewColumn[] {
                 new DataGridViewTextBoxColumn() { Name = "idstock", DataPropertyName = "idstock", HeaderText = "ID de stock" },
                 new DataGridViewTextBoxColumn() { Name = "idprod", DataPropertyName = "idprod", HeaderText = "ID de producto" },
+                new DataGridViewTextBoxColumn() { Name = "nomprod", DataPropertyName = "nomprod", HeaderText = "Nombre de producto" },
                 new DataGridViewTextBoxColumn() { Name = "nrofac", DataPropertyName = "nrofac", HeaderText = "N° de factura" },
+                new DataGridViewTextBoxColumn() { Name = "estado", DataPropertyName = "estado", HeaderText = "Estado" },
             });
             DgvProducto.ReadOnly = true;
             DgvProducto.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             DgvProducto.MultiSelect = false;
 
+            DgvCatalogoProductos.AutoGenerateColumns = false;
+            DgvCatalogoProductos.Columns.AddRange(new DataGridViewColumn[] {
+                new DataGridViewTextBoxColumn() { Name = "idprod", DataPropertyName = "idprod", HeaderText = "ID de producto" },
+                new DataGridViewTextBoxColumn() { Name = "nomprod", DataPropertyName = "nomprod", HeaderText = "Nombre de producto" },
+                new DataGridViewTextBoxColumn() { Name = "descprod", DataPropertyName = "descprod", HeaderText = "Descripción de producto" },
+                new DataGridViewTextBoxColumn() { Name = "precio", DataPropertyName = "precio", HeaderText = "Precio" },
+                new DataGridViewTextBoxColumn() { Name = "imagen", DataPropertyName = "imagen", HeaderText = "Imagen" },
+            });
+            DataGridViewButtonColumn buttonColumn = new DataGridViewButtonColumn();
+            buttonColumn.HeaderText = "Acción";
+            buttonColumn.Text = "EJEMPLO";
+            buttonColumn.UseColumnTextForButtonValue = true;
+            DgvCatalogoProductos.Columns.Add(buttonColumn);
+            DgvCatalogoProductos.CellClick += DgvCatalogoProductos_CellClick;
+
+            DgvCatalogoProductos.ReadOnly = true;
+            DgvCatalogoProductos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            DgvCatalogoProductos.MultiSelect = false;
+
             StartPosition = FormStartPosition.CenterScreen;
+        }
+        private void DgvCatalogoProductos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = DgvCatalogoProductos.Rows[e.RowIndex];
+            DataGridViewColumn column = DgvCatalogoProductos.Columns[e.ColumnIndex];
+            var nomprod = row.Cells["nomprod"].Value.ToString();
+            MessageBox.Show($"Se hizo clic en el botón de la fila {e.RowIndex} (producto '{nomprod}')");
         }
 
         private void VentanaStockProducto_Load(object sender, EventArgs e)
@@ -53,8 +81,12 @@ namespace BuenosAires.VentaBA
             var ws = new ServicioStockProductoClient();
             ws.InnerChannel.OperationTimeout = new TimeSpan(1, 0, 0);
             Respuesta respuesta = ws.LeerTodos();
+            
+            
             if (respuesta.Mensaje != "") Util.MostrarMensaje(respuesta.Mensaje, respuesta.HayErrores);
             var lista = Util.DeserializarXML<List<StockProducto>>(respuesta.XmlListaStockProducto);
+
+
             DgvStockProducto.DataSource = lista;
             DgvStockProducto.Refresh();
             DgvStockProducto.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
@@ -228,10 +260,22 @@ namespace BuenosAires.VentaBA
             ws.InnerChannel.OperationTimeout = new TimeSpan(1, 0, 0);
             Respuesta respuesta = ws.LeerTodosEnJson();
             if (respuesta.Mensaje != "") Util.MostrarMensaje(respuesta.Mensaje, respuesta.HayErrores);
-            var lista = JsonConvert.DeserializeObject<List<StockProducto>>(respuesta.JsonListaProducto);
+            var lista = JsonConvert.DeserializeObject<List<StockProductoConEstado>>(respuesta.JsonListaProducto);
             DgvProducto.DataSource = lista;
             DgvProducto.Refresh();
             DgvProducto.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+        }
+
+        private void BtnCargarProductos_Click(object sender, EventArgs e)
+        {
+            var ws = new ServicioStockProductoClient();
+            ws.InnerChannel.OperationTimeout = new TimeSpan(1, 0, 0);
+            Respuesta respuesta = ws.ProductosLeerTodosEnJson();
+            if (respuesta.Mensaje != "") Util.MostrarMensaje(respuesta.Mensaje, respuesta.HayErrores);
+            var lista = JsonConvert.DeserializeObject<List<Producto>>(respuesta.JsonListaProducto);
+            DgvCatalogoProductos.DataSource = lista;
+            DgvCatalogoProductos.Refresh();
+            DgvCatalogoProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
     }
 }

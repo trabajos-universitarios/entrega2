@@ -1,5 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="BuenosAiresModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AnwoListaProducto">
+    <Key>
+      <PropertyRef Name="nroserieanwo" />
+    </Key>
+    <Property Name="nroserieanwo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="nomprodanwo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="precioanwo" Type="Int32" Nullable="false" />
+    <Property Name="reservadoba" Type="String" MaxLength="1" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
   <EntityType Name="auth_group">
     <Key>
       <PropertyRef Name="id" />
@@ -362,6 +371,7 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="base_datosEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AnwoListaProducto" EntityType="Self.AnwoListaProducto" />
     <EntitySet Name="auth_group" EntityType="Self.auth_group" />
     <EntitySet Name="auth_group_permissions" EntityType="Self.auth_group_permissions" />
     <EntitySet Name="auth_permission" EntityType="Self.auth_permission" />

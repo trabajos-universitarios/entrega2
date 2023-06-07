@@ -32,6 +32,9 @@ namespace BuenosAires.VentaBA.ServicioStockProducto {
         private BuenosAires.VentaBA.ServicioStockProducto.StockProducto[] ListaField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private BuenosAires.VentaBA.ServicioStockProducto.StockProductoConEstado[] ListaConEstadosField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string MensajeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -82,6 +85,19 @@ namespace BuenosAires.VentaBA.ServicioStockProducto {
                 if ((object.ReferenceEquals(this.ListaField, value) != true)) {
                     this.ListaField = value;
                     this.RaisePropertyChanged("Lista");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public BuenosAires.VentaBA.ServicioStockProducto.StockProductoConEstado[] ListaConEstados {
+            get {
+                return this.ListaConEstadosField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ListaConEstadosField, value) != true)) {
+                    this.ListaConEstadosField = value;
+                    this.RaisePropertyChanged("ListaConEstados");
                 }
             }
         }
@@ -204,6 +220,115 @@ namespace BuenosAires.VentaBA.ServicioStockProducto {
                 if ((this.idstockField.Equals(value) != true)) {
                     this.idstockField = value;
                     this.RaisePropertyChanged("idstock");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> nrofac {
+            get {
+                return this.nrofacField;
+            }
+            set {
+                if ((this.nrofacField.Equals(value) != true)) {
+                    this.nrofacField = value;
+                    this.RaisePropertyChanged("nrofac");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="StockProductoConEstado", Namespace="http://schemas.datacontract.org/2004/07/BuenosAires.Model")]
+    [System.SerializableAttribute()]
+    public partial class StockProductoConEstado : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string estadoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int idprodField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int idstockField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string nomprodField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> nrofacField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string estado {
+            get {
+                return this.estadoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.estadoField, value) != true)) {
+                    this.estadoField = value;
+                    this.RaisePropertyChanged("estado");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int idprod {
+            get {
+                return this.idprodField;
+            }
+            set {
+                if ((this.idprodField.Equals(value) != true)) {
+                    this.idprodField = value;
+                    this.RaisePropertyChanged("idprod");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int idstock {
+            get {
+                return this.idstockField;
+            }
+            set {
+                if ((this.idstockField.Equals(value) != true)) {
+                    this.idstockField = value;
+                    this.RaisePropertyChanged("idstock");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string nomprod {
+            get {
+                return this.nomprodField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nomprodField, value) != true)) {
+                    this.nomprodField = value;
+                    this.RaisePropertyChanged("nomprod");
                 }
             }
         }
@@ -2041,13 +2166,22 @@ namespace BuenosAires.VentaBA.ServicioStockProducto {
         private string JsonProductoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string JsonVerificarPasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string MensajeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string XmlAnwoListaProductoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string XmlFacturaField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string XmlGuiaDespachoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string XmlListaAnwoListaProductoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string XmlListaFacturaField;
@@ -2142,6 +2276,19 @@ namespace BuenosAires.VentaBA.ServicioStockProducto {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string JsonVerificarPassword {
+            get {
+                return this.JsonVerificarPasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.JsonVerificarPasswordField, value) != true)) {
+                    this.JsonVerificarPasswordField = value;
+                    this.RaisePropertyChanged("JsonVerificarPassword");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string Mensaje {
             get {
                 return this.MensajeField;
@@ -2150,6 +2297,19 @@ namespace BuenosAires.VentaBA.ServicioStockProducto {
                 if ((object.ReferenceEquals(this.MensajeField, value) != true)) {
                     this.MensajeField = value;
                     this.RaisePropertyChanged("Mensaje");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string XmlAnwoListaProducto {
+            get {
+                return this.XmlAnwoListaProductoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.XmlAnwoListaProductoField, value) != true)) {
+                    this.XmlAnwoListaProductoField = value;
+                    this.RaisePropertyChanged("XmlAnwoListaProducto");
                 }
             }
         }
@@ -2176,6 +2336,19 @@ namespace BuenosAires.VentaBA.ServicioStockProducto {
                 if ((object.ReferenceEquals(this.XmlGuiaDespachoField, value) != true)) {
                     this.XmlGuiaDespachoField = value;
                     this.RaisePropertyChanged("XmlGuiaDespacho");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string XmlListaAnwoListaProducto {
+            get {
+                return this.XmlListaAnwoListaProductoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.XmlListaAnwoListaProductoField, value) != true)) {
+                    this.XmlListaAnwoListaProductoField = value;
+                    this.RaisePropertyChanged("XmlListaAnwoListaProducto");
                 }
             }
         }
@@ -2320,6 +2493,99 @@ namespace BuenosAires.VentaBA.ServicioStockProducto {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="AnwoListaProducto", Namespace="http://schemas.datacontract.org/2004/07/BuenosAires.Model")]
+    [System.SerializableAttribute()]
+    public partial class AnwoListaProducto : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string nomprodanwoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string nroserieanwoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int precioanwoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string reservadobaField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string nomprodanwo {
+            get {
+                return this.nomprodanwoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nomprodanwoField, value) != true)) {
+                    this.nomprodanwoField = value;
+                    this.RaisePropertyChanged("nomprodanwo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string nroserieanwo {
+            get {
+                return this.nroserieanwoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nroserieanwoField, value) != true)) {
+                    this.nroserieanwoField = value;
+                    this.RaisePropertyChanged("nroserieanwo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int precioanwo {
+            get {
+                return this.precioanwoField;
+            }
+            set {
+                if ((this.precioanwoField.Equals(value) != true)) {
+                    this.precioanwoField = value;
+                    this.RaisePropertyChanged("precioanwo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string reservadoba {
+            get {
+                return this.reservadobaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.reservadobaField, value) != true)) {
+                    this.reservadobaField = value;
+                    this.RaisePropertyChanged("reservadoba");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServicioStockProducto.IServicioStockProducto")]
     public interface IServicioStockProducto {
@@ -2371,6 +2637,42 @@ namespace BuenosAires.VentaBA.ServicioStockProducto {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioStockProducto/LeerTodosEnJson", ReplyAction="http://tempuri.org/IServicioStockProducto/LeerTodosEnJsonResponse")]
         System.Threading.Tasks.Task<BuenosAires.VentaBA.ServicioStockProducto.Respuesta> LeerTodosEnJsonAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioStockProducto/ProductosLeerTodosEnJson", ReplyAction="http://tempuri.org/IServicioStockProducto/ProductosLeerTodosEnJsonResponse")]
+        BuenosAires.VentaBA.ServicioStockProducto.Respuesta ProductosLeerTodosEnJson();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioStockProducto/ProductosLeerTodosEnJson", ReplyAction="http://tempuri.org/IServicioStockProducto/ProductosLeerTodosEnJsonResponse")]
+        System.Threading.Tasks.Task<BuenosAires.VentaBA.ServicioStockProducto.Respuesta> ProductosLeerTodosEnJsonAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioStockProducto/PerfilUsuarioLeerTodos", ReplyAction="http://tempuri.org/IServicioStockProducto/PerfilUsuarioLeerTodosResponse")]
+        BuenosAires.VentaBA.ServicioStockProducto.Respuesta PerfilUsuarioLeerTodos();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioStockProducto/PerfilUsuarioLeerTodos", ReplyAction="http://tempuri.org/IServicioStockProducto/PerfilUsuarioLeerTodosResponse")]
+        System.Threading.Tasks.Task<BuenosAires.VentaBA.ServicioStockProducto.Respuesta> PerfilUsuarioLeerTodosAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioStockProducto/VerificarPassword", ReplyAction="http://tempuri.org/IServicioStockProducto/VerificarPasswordResponse")]
+        BuenosAires.VentaBA.ServicioStockProducto.Respuesta VerificarPassword(string cuenta, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioStockProducto/VerificarPassword", ReplyAction="http://tempuri.org/IServicioStockProducto/VerificarPasswordResponse")]
+        System.Threading.Tasks.Task<BuenosAires.VentaBA.ServicioStockProducto.Respuesta> VerificarPasswordAsync(string cuenta, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioStockProducto/Reservar", ReplyAction="http://tempuri.org/IServicioStockProducto/ReservarResponse")]
+        BuenosAires.VentaBA.ServicioStockProducto.Respuesta Reservar(string nroserieanwo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioStockProducto/Reservar", ReplyAction="http://tempuri.org/IServicioStockProducto/ReservarResponse")]
+        System.Threading.Tasks.Task<BuenosAires.VentaBA.ServicioStockProducto.Respuesta> ReservarAsync(string nroserieanwo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioStockProducto/LeerTodosAnwoListaProducto", ReplyAction="http://tempuri.org/IServicioStockProducto/LeerTodosAnwoListaProductoResponse")]
+        BuenosAires.VentaBA.ServicioStockProducto.Respuesta LeerTodosAnwoListaProducto();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioStockProducto/LeerTodosAnwoListaProducto", ReplyAction="http://tempuri.org/IServicioStockProducto/LeerTodosAnwoListaProductoResponse")]
+        System.Threading.Tasks.Task<BuenosAires.VentaBA.ServicioStockProducto.Respuesta> LeerTodosAnwoListaProductoAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioStockProducto/MetodoAuxiliar", ReplyAction="http://tempuri.org/IServicioStockProducto/MetodoAuxiliarResponse")]
+        BuenosAires.VentaBA.ServicioStockProducto.Respuesta MetodoAuxiliar(BuenosAires.VentaBA.ServicioStockProducto.AnwoListaProducto anwoListaProducto);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioStockProducto/MetodoAuxiliar", ReplyAction="http://tempuri.org/IServicioStockProducto/MetodoAuxiliarResponse")]
+        System.Threading.Tasks.Task<BuenosAires.VentaBA.ServicioStockProducto.Respuesta> MetodoAuxiliarAsync(BuenosAires.VentaBA.ServicioStockProducto.AnwoListaProducto anwoListaProducto);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -2462,6 +2764,54 @@ namespace BuenosAires.VentaBA.ServicioStockProducto {
         
         public System.Threading.Tasks.Task<BuenosAires.VentaBA.ServicioStockProducto.Respuesta> LeerTodosEnJsonAsync() {
             return base.Channel.LeerTodosEnJsonAsync();
+        }
+        
+        public BuenosAires.VentaBA.ServicioStockProducto.Respuesta ProductosLeerTodosEnJson() {
+            return base.Channel.ProductosLeerTodosEnJson();
+        }
+        
+        public System.Threading.Tasks.Task<BuenosAires.VentaBA.ServicioStockProducto.Respuesta> ProductosLeerTodosEnJsonAsync() {
+            return base.Channel.ProductosLeerTodosEnJsonAsync();
+        }
+        
+        public BuenosAires.VentaBA.ServicioStockProducto.Respuesta PerfilUsuarioLeerTodos() {
+            return base.Channel.PerfilUsuarioLeerTodos();
+        }
+        
+        public System.Threading.Tasks.Task<BuenosAires.VentaBA.ServicioStockProducto.Respuesta> PerfilUsuarioLeerTodosAsync() {
+            return base.Channel.PerfilUsuarioLeerTodosAsync();
+        }
+        
+        public BuenosAires.VentaBA.ServicioStockProducto.Respuesta VerificarPassword(string cuenta, string password) {
+            return base.Channel.VerificarPassword(cuenta, password);
+        }
+        
+        public System.Threading.Tasks.Task<BuenosAires.VentaBA.ServicioStockProducto.Respuesta> VerificarPasswordAsync(string cuenta, string password) {
+            return base.Channel.VerificarPasswordAsync(cuenta, password);
+        }
+        
+        public BuenosAires.VentaBA.ServicioStockProducto.Respuesta Reservar(string nroserieanwo) {
+            return base.Channel.Reservar(nroserieanwo);
+        }
+        
+        public System.Threading.Tasks.Task<BuenosAires.VentaBA.ServicioStockProducto.Respuesta> ReservarAsync(string nroserieanwo) {
+            return base.Channel.ReservarAsync(nroserieanwo);
+        }
+        
+        public BuenosAires.VentaBA.ServicioStockProducto.Respuesta LeerTodosAnwoListaProducto() {
+            return base.Channel.LeerTodosAnwoListaProducto();
+        }
+        
+        public System.Threading.Tasks.Task<BuenosAires.VentaBA.ServicioStockProducto.Respuesta> LeerTodosAnwoListaProductoAsync() {
+            return base.Channel.LeerTodosAnwoListaProductoAsync();
+        }
+        
+        public BuenosAires.VentaBA.ServicioStockProducto.Respuesta MetodoAuxiliar(BuenosAires.VentaBA.ServicioStockProducto.AnwoListaProducto anwoListaProducto) {
+            return base.Channel.MetodoAuxiliar(anwoListaProducto);
+        }
+        
+        public System.Threading.Tasks.Task<BuenosAires.VentaBA.ServicioStockProducto.Respuesta> MetodoAuxiliarAsync(BuenosAires.VentaBA.ServicioStockProducto.AnwoListaProducto anwoListaProducto) {
+            return base.Channel.MetodoAuxiliarAsync(anwoListaProducto);
         }
     }
 }

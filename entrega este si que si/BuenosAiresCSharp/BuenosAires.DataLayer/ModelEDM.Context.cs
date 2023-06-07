@@ -25,7 +25,8 @@ namespace BuenosAires.DataLayer
         {
             throw new UnintentionalCodeFirstException();
         }
-    
+
+        public virtual DbSet<AnwoListaProducto> AnwoListaProducto { get; set; }
         public virtual DbSet<auth_group> auth_group { get; set; }
         public virtual DbSet<auth_group_permissions> auth_group_permissions { get; set; }
         public virtual DbSet<auth_permission> auth_permission { get; set; }

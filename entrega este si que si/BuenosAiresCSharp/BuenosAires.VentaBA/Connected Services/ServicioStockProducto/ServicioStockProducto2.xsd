@@ -215,4 +215,29 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfauth_permission" nillable="true" type="tns:ArrayOfauth_permission" />
+  <xs:complexType name="ArrayOfStockProductoConEstado">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StockProductoConEstado" nillable="true" type="tns:StockProductoConEstado" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStockProductoConEstado" nillable="true" type="tns:ArrayOfStockProductoConEstado" />
+  <xs:complexType name="StockProductoConEstado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="idprod" type="xs:int" />
+      <xs:element minOccurs="0" name="idstock" type="xs:int" />
+      <xs:element minOccurs="0" name="nomprod" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nrofac" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StockProductoConEstado" nillable="true" type="tns:StockProductoConEstado" />
+  <xs:complexType name="AnwoListaProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nomprodanwo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nroserieanwo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="precioanwo" type="xs:int" />
+      <xs:element minOccurs="0" name="reservadoba" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AnwoListaProducto" nillable="true" type="tns:AnwoListaProducto" />
 </xs:schema>

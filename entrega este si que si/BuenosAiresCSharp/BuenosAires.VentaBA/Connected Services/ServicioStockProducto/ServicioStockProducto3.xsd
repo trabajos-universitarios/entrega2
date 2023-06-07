@@ -6,9 +6,12 @@
       <xs:element minOccurs="0" name="HayErrores" type="xs:boolean" />
       <xs:element minOccurs="0" name="JsonListaProducto" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="JsonProducto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JsonVerificarPassword" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XmlAnwoListaProducto" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="XmlFactura" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="XmlGuiaDespacho" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XmlListaAnwoListaProducto" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="XmlListaFactura" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="XmlListaGuiaDespacho" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="XmlListaPerfilUsuario" nillable="true" type="xs:string" />

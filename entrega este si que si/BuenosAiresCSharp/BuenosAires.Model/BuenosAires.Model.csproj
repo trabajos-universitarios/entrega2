@@ -48,6 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnwoListaProducto.cs">
+      <DependentUpon>ModelEDM.tt</DependentUpon>
+    </Compile>
     <Compile Include="auth_group.cs">
       <DependentUpon>ModelEDM.tt</DependentUpon>
     </Compile>
@@ -94,6 +97,7 @@
     <Compile Include="SolicitudServicio.cs">
       <DependentUpon>ModelEDM.tt</DependentUpon>
     </Compile>
+    <Compile Include="StockProductoConEstado.cs" />
     <Compile Include="StockProducto.cs">
       <DependentUpon>ModelEDM.tt</DependentUpon>
     </Compile>

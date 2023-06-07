@@ -1,6 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="BuenosAiresModelStoreContainer" CdmEntityContainer="base_datosEntities">
+    <EntitySetMapping Name="AnwoListaProducto">
+      <EntityTypeMapping TypeName="BuenosAiresModel.AnwoListaProducto">
+        <MappingFragment StoreEntitySet="AnwoListaProducto">
+          <ScalarProperty Name="nroserieanwo" ColumnName="nroserieanwo" />
+          <ScalarProperty Name="nomprodanwo" ColumnName="nomprodanwo" />
+          <ScalarProperty Name="precioanwo" ColumnName="precioanwo" />
+          <ScalarProperty Name="reservadoba" ColumnName="reservadoba" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="auth_group">
       <EntityTypeMapping TypeName="BuenosAiresModel.auth_group">
         <MappingFragment StoreEntitySet="auth_group">

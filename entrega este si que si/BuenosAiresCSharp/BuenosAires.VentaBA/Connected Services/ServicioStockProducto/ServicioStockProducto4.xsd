@@ -111,4 +111,83 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="ProductosLeerTodosEnJson">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProductosLeerTodosEnJsonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="ProductosLeerTodosEnJsonResult" nillable="true" type="q13:Respuesta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PerfilUsuarioLeerTodos">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PerfilUsuarioLeerTodosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="PerfilUsuarioLeerTodosResult" nillable="true" type="q14:Respuesta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificarPassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cuenta" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificarPasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="VerificarPasswordResult" nillable="true" type="q15:Respuesta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Reservar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nroserieanwo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReservarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="ReservarResult" nillable="true" type="q16:Respuesta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerTodosAnwoListaProducto">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LeerTodosAnwoListaProductoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="LeerTodosAnwoListaProductoResult" nillable="true" type="q17:Respuesta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MetodoAuxiliar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/BuenosAires.Model" minOccurs="0" name="anwoListaProducto" nillable="true" type="q18:AnwoListaProducto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MetodoAuxiliarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="MetodoAuxiliarResult" nillable="true" type="q19:Respuesta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using BuenosAires.Model;
+using System.Configuration;
+using System.Data.SqlClient;
+using System.Data;
+using System.Data.Entity.Core.EntityClient;
 
 namespace BuenosAires.DataLayer
 {
@@ -12,6 +16,7 @@ namespace BuenosAires.DataLayer
         public bool HayErrores = false;
         public StockProducto StockProducto = null;
         public List<StockProducto> Lista = null;
+        public List<StockProductoConEstado> ListaConEstados = null;
 
         public DcStockProducto()
         {
@@ -25,6 +30,7 @@ namespace BuenosAires.DataLayer
             this.HayErrores = false;
             this.StockProducto = null;
             this.Lista = null;
+            this.ListaConEstados = null;
         }
 
         public int ContarStockProductoPorProducto(int idprod)

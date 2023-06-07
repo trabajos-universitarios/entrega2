@@ -71,4 +71,10 @@ public class Respuesta
 	public string JsonProducto { get; set; }
 	[DataMember]
 	public string JsonListaProducto { get; set; }
+	[DataMember]
+	public string JsonVerificarPassword { get; set; }
+	[DataMember]
+	public string XmlAnwoListaProducto { get; set; }
+	[DataMember]
+	public string XmlListaAnwoListaProducto { get; set; }
 }

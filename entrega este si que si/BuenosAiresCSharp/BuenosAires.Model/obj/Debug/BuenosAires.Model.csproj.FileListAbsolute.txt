@@ -19,14 +19,3 @@ C:\BuenosAires\BuenosAiresCSharp\BuenosAires.Model\obj\Debug\BuenosAires.Model.c
 C:\BuenosAires\BuenosAiresCSharp\BuenosAires.Model\obj\Debug\BuenosAires.Model.csproj.CopyComplete
 C:\BuenosAires\BuenosAiresCSharp\BuenosAires.Model\obj\Debug\BuenosAires.Model.dll
 C:\BuenosAires\BuenosAiresCSharp\BuenosAires.Model\obj\Debug\BuenosAires.Model.pdb
-C:\Users\Dieguito\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.Model\bin\Debug\BuenosAires.Model.dll
-C:\Users\Dieguito\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.Model\bin\Debug\BuenosAires.Model.pdb
-C:\Users\Dieguito\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.Model\bin\Debug\EntityFramework.dll
-C:\Users\Dieguito\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.Model\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Dieguito\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.Model\bin\Debug\EntityFramework.xml
-C:\Users\Dieguito\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.Model\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Dieguito\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.Model\obj\Debug\BuenosAires.Model.csproj.AssemblyReference.cache
-C:\Users\Dieguito\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.Model\obj\Debug\BuenosAires.Model.csproj.CoreCompileInputs.cache
-C:\Users\Dieguito\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.Model\obj\Debug\BuenosAires.Model.csproj.CopyComplete
-C:\Users\Dieguito\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.Model\obj\Debug\BuenosAires.Model.dll
-C:\Users\Dieguito\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.Model\obj\Debug\BuenosAires.Model.pdb

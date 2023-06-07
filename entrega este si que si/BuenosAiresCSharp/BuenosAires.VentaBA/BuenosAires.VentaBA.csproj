@@ -64,6 +64,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util.cs" />
+    <Compile Include="VentanaAnwo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaAnwo.Designer.cs">
+      <DependentUpon>VentanaAnwo.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanaBuscarID.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,12 @@
     </Compile>
     <Compile Include="VentanaCatalogoProductos.Designer.cs">
       <DependentUpon>VentanaCatalogoProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaLogin.Designer.cs">
+      <DependentUpon>VentanaLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="VentanaStockProducto.cs">
       <SubType>Form</SubType>
@@ -91,11 +103,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="VentanaAnwo.resx">
+      <DependentUpon>VentanaAnwo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VentanaBuscarID.resx">
       <DependentUpon>VentanaBuscarID.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaCatalogoProductos.resx">
       <DependentUpon>VentanaCatalogoProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaLogin.resx">
+      <DependentUpon>VentanaLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaStockProducto.resx">
       <DependentUpon>VentanaStockProducto.cs</DependentUpon>

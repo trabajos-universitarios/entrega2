@@ -1,50 +1,39 @@
-﻿using System.Collections.Generic;
-using BuenosAires.BusinessLayer;
+﻿using BuenosAires.BusinessLayer;
 using BuenosAires.Model;
-using System.IO;
-using System.Xml.Serialization;
+using System;
 using System.Net.Http;
 
 public class ServicioStockProducto : IServicioStockProducto
 {
     public Respuesta ObtenerRespuesta(BcStockProducto bc)
     {
-        //BcProducto bcProd = null;
-        //BcFactura bcFac = null;
-        //XmlSerializer serializer = null;
-        //StringWriter stringWriter = null;
-        //string xml1 = null;
-        //string xml2 = null;
-        //string xml3 = null;
-
-        //bcProd = new BcProducto();
-        //bcProd.LeerTodos();
-        //serializer = new XmlSerializer(typeof(List<Producto>));
-        //stringWriter = new StringWriter();
-        //List<Producto> listaProd = new List<Producto>();
-        //Util.CopiarPropiedades(bcProd.Lista, listaProd);
-        //serializer.Serialize(stringWriter, listaProd);
-        //xml2 = stringWriter.ToString();
-
-        //bcProd = new BcProducto();
-        //bcProd.LeerTodos();
-        //xml2 = Util.SerializarXML(bcProd.Lista);
-
-        //var lista = Util.DeserializarXML<List<Producto>>(xml2);
-
-
         var respuesta = new Respuesta();
         respuesta.Accion = bc.Accion;
         respuesta.Mensaje = bc.Mensaje;
         respuesta.HayErrores = bc.HayErrores;
         respuesta.XmlStockProducto = Util.SerializarXML(bc.StockProducto);
-
-        //List<Producto> listaProd = new List<Producto>();
-        //listaProd.Add(new Producto() { idprod=1, descprod="desc", nomprod="nom", imagen="ima", precio=123});
-        //respuesta.XmlListaStockProducto = Util.SerializarXML(listaProd);
-        //Util.CopiarPropiedades(bc.Lista, listaProd);
-
         respuesta.XmlListaStockProducto = Util.SerializarXML(bc.Lista);
+        return respuesta;
+    }
+
+    public Respuesta ObtenerRespuestaPerfilusuario(BcPerfilUsuario bc)
+    {
+        var respuesta = new Respuesta();
+        respuesta.Accion = bc.Accion;
+        respuesta.Mensaje = bc.Mensaje;
+        respuesta.HayErrores = bc.HayErrores;
+        respuesta.XmlPerfilUsuario = Util.SerializarXML(bc.PerfilUsuario);
+        respuesta.XmlListaPerfilUsuario = Util.SerializarXML(bc.PerfilUsuario);
+        return respuesta;
+    }
+    public Respuesta ObtenerRespuestaAnwoListaProducto(BcAnwoListaProducto bc)
+    {
+        var respuesta = new Respuesta();
+        respuesta.Accion = bc.Accion;
+        respuesta.Mensaje = bc.Mensaje;
+        respuesta.HayErrores = bc.HayErrores;
+        respuesta.XmlAnwoListaProducto = Util.SerializarXML(bc.AnwoListaProducto);
+        respuesta.XmlListaAnwoListaProducto = Util.SerializarXML(bc.Lista);
         return respuesta;
     }
 
@@ -99,23 +88,131 @@ public class ServicioStockProducto : IServicioStockProducto
         respuesta.JsonProducto = "";
         respuesta.JsonListaProducto = "";
 
-        string apiUrl = "http://127.0.0.1:8000/api/productos_bodega_leer_todos/";
+        string apiUrl = "http://127.0.0.1:8000/api/obtener_equipos_en_bodega";
 
-        using (HttpClient client = new HttpClient())
+        try
         {
-            HttpResponseMessage response = client.GetAsync(apiUrl).Result;
+            using (HttpClient client = new HttpClient())
+            {
+                HttpResponseMessage response = client.GetAsync(apiUrl).Result;
 
-            if (response.IsSuccessStatusCode)
-            {
-                respuesta.JsonListaProducto = response.Content.ReadAsStringAsync().Result; // Leer la respuesta como cadena JSON
+                if (response.IsSuccessStatusCode)
+                {
+                    respuesta.JsonListaProducto = response.Content.ReadAsStringAsync().Result; // Leer la respuesta como cadena JSON
+                }
+                else
+                {
+                    respuesta.Mensaje = "No fue posible " + respuesta.Accion;
+                    respuesta.HayErrores = true;
+                }
             }
-            else
-            {
-                respuesta.Mensaje = "No fue posible " + respuesta.Accion;
-                respuesta.HayErrores = true;
-            }
+        }
+        catch(Exception ex)
+        {
+            respuesta.HayErrores = true;
+            respuesta.Mensaje = Util.MensajeError("No fue posible " + respuesta.Accion, ex);
         }
 
         return respuesta;
     }
+
+    public Respuesta ProductosLeerTodosEnJson()
+    {
+        var respuesta = new Respuesta();
+        respuesta.Accion = "obtener lista de productos";
+        respuesta.Mensaje = "";
+        respuesta.HayErrores = false;
+        respuesta.JsonProducto = "";
+        respuesta.JsonListaProducto = "";
+
+        string apiUrl = "http://127.0.0.1:8000/api/obtener_productos";
+
+        try
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                HttpResponseMessage response = client.GetAsync(apiUrl).Result;
+
+                if (response.IsSuccessStatusCode)
+                {
+                    respuesta.JsonListaProducto = response.Content.ReadAsStringAsync().Result; // Leer la respuesta como cadena JSON
+                }
+                else
+                {
+                    respuesta.Mensaje = "No fue posible " + respuesta.Accion;
+                    respuesta.HayErrores = true;
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            respuesta.HayErrores = true;
+            respuesta.Mensaje = Util.MensajeError("No fue posible " + respuesta.Accion, ex);
+        }
+
+        return respuesta;
+    }
+
+    public Respuesta VerificarPassword(string username, string password)
+    {
+        var respuesta = new Respuesta();
+        respuesta.Accion = "verificar password";
+        respuesta.Mensaje = "";
+        respuesta.HayErrores = false;
+        respuesta.JsonVerificarPassword = "";
+
+        string apiUrl = "http://127.0.0.1:8000/api/verificar_password/" + username + "/" + password;
+
+        try
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                HttpResponseMessage response = client.GetAsync(apiUrl).Result;
+
+                if (response.IsSuccessStatusCode)
+                {
+                    respuesta.JsonVerificarPassword = response.Content.ReadAsStringAsync().Result; // Leer la respuesta como cadena JSON
+                }
+                else
+                {
+                    respuesta.Mensaje = "No fue posible " + respuesta.Accion;
+                    respuesta.HayErrores = true;
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            respuesta.HayErrores = true;
+            respuesta.Mensaje = Util.MensajeError("No fue posible " + respuesta.Accion, ex);
+        }
+
+        return respuesta;
+    }
+
+    public Respuesta PerfilUsuarioLeerTodos()
+    {
+        var bc = new BcPerfilUsuario();
+        bc.LeerTodos();
+        return ObtenerRespuestaPerfilusuario(bc);
+    }
+
+    public Respuesta Reservar(string nroserieanwo)
+    {
+        var bc = new BcAnwoListaProducto();
+        bc.Reservar(nroserieanwo);
+        return ObtenerRespuestaAnwoListaProducto(bc);
+    }
+
+    public Respuesta LeerTodosAnwoListaProducto()
+    {
+        var bc = new BcAnwoListaProducto();
+        bc.LeerTodos();
+        return ObtenerRespuestaAnwoListaProducto(bc);
+    }
+
+    public Respuesta MetodoAuxiliar(AnwoListaProducto anwoListaProducto)
+    {
+        return null;
+    }
+
 }
