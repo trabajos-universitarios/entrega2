@@ -14,6 +14,18 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     {% block stylesheet %} {% endblock %}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#boton-formulario").click(function() {
+                $("#formulario-emergente").fadeIn();
+            });
+
+            $(".cerrar-formulario").click(function() {
+                $("#formulario-emergente").fadeOut();
+            });
+        });
+    </script>
 </head>
 <body>
     {% block navbar %}
@@ -29,6 +41,7 @@
                 set_nav_li("#perfil", "{% url 'perfil_usuario' %}", "{% static 'core/img/profile.png' %}");
                 set_nav_li("#chpass", "{% url 'cambiar_password' %}", "{% static 'core/img/contra.png' %}");
                 set_nav_li("#missol", "{% url 'mis_solicitudes' %}", "{% static 'core/img/contra.png' %}");
+                set_nav_li("#admsol", "{% url 'solicitudes_administrador' %}", "{% static 'core/img/contra.png' %}");
 
                 function set_nav_li(id, url, img) {
                     $(id).addClass('nav-item list-inline-item align-center nav_item_text');
@@ -58,12 +71,13 @@
                     {% if user.is_authenticated %}
                         <li id="chpass">Cambiar contraseña</li>
                         <li id="cerses">Cerrar sesión</li>
-                        <li id="perfil">{{ user.get_full_name }}</li>
+                        <li id="perfil">{{ user.get_full_name }} ({{permiso}})</li>
                     {% endif %}
 
                     {% if user.is_authenticated and permiso == 'Administrador' %}
                     <li id="admsis">Administrar sistema</li>
                     <li id="manpro">Mantener productos</li>
+                    <li id="admsol">Administrar solicitudes</li>
                     {% endif %}
 
                     {% if user.is_authenticated and permiso == 'Cliente' %}

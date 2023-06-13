@@ -43,3 +43,14 @@ class Solicitud(forms.Form):
         fields = ['tipo','desc','fecha']
         widgets = {'tipo': forms.TextInput(attrs={'class': 'form-control'})
                     }
+        
+        
+class Solicitud_estado(forms.Form):
+    CHOICES = [('Pendiente', 'Pendiente'), ('Cerrada', 'Cerrada'), ('Aceptada', 'Aceptada'),('Modificada', 'Modificada')]
+    tipo = forms.ChoiceField(choices=CHOICES,widget=forms.Select(
+    attrs={'class':'form-select', 'name': 'tipo','placeholder':'tipo:'}),
+    label='Estado')
+    class Meta:
+        fields = ['tipo']
+        widgets = {'tipo': forms.TextInput(attrs={'class': 'form-control'})
+                    }        
