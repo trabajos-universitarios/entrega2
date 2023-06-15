@@ -364,8 +364,18 @@ def mis_solicitudes(request):
     return render(request, 'core/mis_solicitudes.html', context)
 
 def solicitudes_administrador(request):
+    if request.method == 'POST':
+        form = Solicitud_estado(request.POST)
+        if form.is_valid():
+            id = request.POST.get("nrosol")
+            
+            print("hola")
+            solicitud = Solicitud_estado.objects.get(nrosol=id)
+            solicitud.estadosol = 
+            return redirect(Solicitud_estado)
+    form = Solicitud_estado()
     solicitudes = SolicitudServicio.objects.all()
-    context = {'soli': solicitudes}
+    context = {'soli': solicitudes,'form' : form }
     return render(request, 'core/admin_solicitudes.html', context)
 
 def eliminar_solicitudes(request,id):
