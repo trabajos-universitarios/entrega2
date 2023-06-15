@@ -18,76 +18,108 @@ from django.db.models import Count
 
 
 def tienda(request):
+    # Obtiene todos los productos de la base de datos
     lista_productos = Producto.objects.all()
     
-    for producto in lista_productos:
-        precio_en_pesos = producto.precio  # Supongamos que el precio está en pesos
-        respuesta = requests.get("https://api.exchangeratesapi.io/latest?base=MXN&symbols=USD")
-        
-        if respuesta.status_code == 200:
-            datos = respuesta.json()
-            
-            if 'rates' in datos and 'USD' in datos['rates']:
-                tasa_cambio = datos['rates']['USD']
-                precio_en_dolares = precio_en_pesos / tasa_cambio
-            else:
-                precio_en_dolares = 0  # O establece un valor predeterminado si no se puede obtener la tasa de cambio
-        else:
-            precio_en_dolares = 0  # O establece un valor predeterminado si no se puede obtener la respuesta de la API
-        
-        producto.precio_en_dolares = precio_en_dolares
-    
+    # Crea un contexto con la lista de productos
     contexto = {'list': lista_productos}
+    
+    # Devuelve una respuesta renderizada utilizando la plantilla "core/tienda.html" y el contexto
     return render(request, "core/tienda.html", contexto)
 
 
 
+
 def perfil_usuario(request):
+    # Se define un diccionario de datos con claves iniciales y un formulario PerfilUsuarioForm
     data = {"mesg": "", "form": PerfilUsuarioForm}
 
+    # Verifica si el método de la solicitud es POST
     if request.method == 'POST':
+        # Crea una instancia del formulario PerfilUsuarioForm con los datos de la solicitud POST
         form = PerfilUsuarioForm(request.POST)
+        
+        # Verifica si el formulario es válido
         if form.is_valid():
+            # Obtiene el usuario actual
             user = request.user
+            
+            # Actualiza los campos del usuario con los datos del formulario
             user.first_name = request.POST.get("first_name")
             user.last_name = request.POST.get("last_name")
             user.email = request.POST.get("email")
             user.save()
+            
+            # Obtiene el perfil de usuario asociado al usuario actual
             perfil = PerfilUsuario.objects.get(user=user)
+            
+            # Actualiza los campos del perfil de usuario con los datos del formulario
             perfil.rut = request.POST.get("rut")
             perfil.tipousu = request.POST.get("tipousu")
             perfil.dirusu = request.POST.get("dirusu")
             perfil.save()
+            
+            # Actualiza el mensaje en el diccionario de datos
             data["mesg"] = "¡Sus datos fueron actualizados correctamente!"
 
+    # Obtiene el perfil de usuario asociado al usuario actual
     perfil = PerfilUsuario.objects.get(user=request.user)
+    
+    # Crea una instancia del formulario PerfilUsuarioForm vacío
     form = PerfilUsuarioForm()
+    
+    # Establece los valores iniciales del formulario con los datos del usuario y perfil
     form.fields['first_name'].initial = request.user.first_name
     form.fields['last_name'].initial = request.user.last_name
     form.fields['email'].initial = request.user.email
     form.fields['rut'].initial = perfil.rut
     form.fields['tipousu'].initial = perfil.tipousu
     form.fields['dirusu'].initial = perfil.dirusu
+    
+    # Actualiza el formulario en el diccionario de datos
     data["form"] = form
+    
+    # Devuelve una respuesta renderizada utilizando la plantilla "core/perfil_usuario.html" y los datos
     return render(request, "core/perfil_usuario.html", data)
 
+
 def iniciar_sesion(request):
+    # Se define un diccionario de datos con claves iniciales y una instancia del formulario IniciarSesionForm
     data = {"mesg": "", "form": IniciarSesionForm()}
+
+    # Verifica si el método de la solicitud es POST
     if request.method == "POST":
+        # Crea una instancia del formulario IniciarSesionForm con los datos de la solicitud POST
         form = IniciarSesionForm(request.POST)
+        
+        # Verifica si el formulario es válido
         if form.is_valid:
+            # Obtiene el nombre de usuario y la contraseña de la solicitud POST
             username = request.POST.get("username")
             password = request.POST.get("password")
+            
+            # Autentica el usuario con el nombre de usuario y la contraseña proporcionados
             user = authenticate(username=username, password=password)
+            
+            # Verifica si el usuario es válido (no es None)
             if user is not None:
+                # Verifica si el usuario está activo
                 if user.is_active:
+                    # Inicia sesión almacena la información de la sesión en la solicitud actual
                     login(request, user)
+                    
+                    # Redirige al usuario a la vista "tienda"
                     return redirect(tienda)
                 else:
-                    data["mesg"] = "¡La cuenta o la password no son correctos!"
+                    # Actualiza el mensaje de error en el diccionario de datos si la cuenta no está activa
+                    data["mesg"] = "¡La cuenta o la contraseña no son correctas!"
             else:
-                data["mesg"] = "¡La cuenta o la password no son correctos!"
+                # Actualiza el mensaje de error en el diccionario de datos si la autenticación falla
+                data["mesg"] = "¡La cuenta o la contraseña no son correctas!"
+
+    # Devuelve una respuesta renderizada utilizando la plantilla "core/iniciar_sesion.html" y los datos
     return render(request, "core/iniciar_sesion.html", data)
+
 
 def cerrar_sesion(request):
     logout(request)
