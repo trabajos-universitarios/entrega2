@@ -368,13 +368,22 @@ def solicitudes_administrador(request):
         form = Solicitud_estado(request.POST)
         if form.is_valid():
             id = request.POST.get("nrosol")
-            
-            print("hola")
-            solicitud = Solicitud_estado.objects.get(nrosol=id)
-            solicitud.estadosol = 
-            return redirect(Solicitud_estado)
+            opcion = request.POST.get("tipo")
+            print(opcion)
+            solicitud = SolicitudServicio.objects.get(nrosol=id)
+            solicitud.estadosol = opcion
+            solicitud.save()
+            return redirect(solicitudes_administrador)
     form = Solicitud_estado()
-    solicitudes = SolicitudServicio.objects.all()
+    permiso = "Cliente"
+    if request.user.is_authenticated:
+        user = User.objects.get(username=request.user.username)
+        perfil = PerfilUsuario.objects.get(user=user)
+        permiso = perfil.tipousu
+    if permiso == "Administrador":
+        solicitudes = SolicitudServicio.objects.all()
+    elif permiso == "Técnico":
+        solicitudes = SolicitudServicio.objects.filter(ruttec=perfil)
     context = {'soli': solicitudes,'form' : form }
     return render(request, 'core/admin_solicitudes.html', context)
 

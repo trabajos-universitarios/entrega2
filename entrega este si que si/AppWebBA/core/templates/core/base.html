@@ -80,6 +80,10 @@
                     <li id="admsol">Administrar solicitudes</li>
                     {% endif %}
 
+                    {% if user.is_authenticated and permiso == 'Técnico' %}
+                    <li id="admsol">Administrar solicitudes</li>
+                    {% endif %}
+
                     {% if user.is_authenticated and permiso == 'Cliente' %}
                     <li id="inicio">Mis compras</li>    
                     <li id="missol">Mis solicitudes</li>

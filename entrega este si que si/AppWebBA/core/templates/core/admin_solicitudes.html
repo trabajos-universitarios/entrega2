@@ -26,7 +26,9 @@
                         <th>Descripción</th>
                         <th>Estado SS</th>
                         <th>Editar</th>
+                        {% if permiso == 'Administrador' %}
                         <th>Eliminar</th>
+                        {% endif %}
                     </tr>
                 </thead>
                 <tbody>
@@ -40,7 +42,9 @@
                         <td>{{ pro.descsol }}</td>
                         <td>{{ pro.estadosol }}</td>
                         <td><button class="btn btn-danger btn-sm boton_chico boton-formulario" data-nrosol="{{ pro.nrosol }}">Editar</button></td>
+                        {% if permiso == 'Administrador' %}
                         <td><a href="{% url 'eliminar_solicitudes' pro.nrosol %}" class="btn btn-danger btn-sm boton_chico">Eliminar</a></td>
+                        {% endif %}
                     </tr>
                     {% endfor %}
                 </tbody>
