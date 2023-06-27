@@ -1,0 +1,14 @@
+C:\Users\glado\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.VentaBA\bin\Release\BuenosAires.VentaBA.exe.config
+C:\Users\glado\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.VentaBA\bin\Release\BuenosAires.VentaBA.exe
+C:\Users\glado\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.VentaBA\bin\Release\BuenosAires.VentaBA.pdb
+C:\Users\glado\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.VentaBA\bin\Release\Newtonsoft.Json.dll
+C:\Users\glado\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.VentaBA\bin\Release\Newtonsoft.Json.xml
+C:\Users\glado\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.VentaBA\obj\Release\BuenosAires.VentaBA.Properties.Resources.resources
+C:\Users\glado\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.VentaBA\obj\Release\BuenosAires.VentaBA.VentanaBuscarID.resources
+C:\Users\glado\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.VentaBA\obj\Release\BuenosAires.VentaBA.VentanaCatalogoProductos.resources
+C:\Users\glado\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.VentaBA\obj\Release\BuenosAires.VentaBA.VentanaStockProducto.resources
+C:\Users\glado\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.VentaBA\obj\Release\BuenosAires.VentaBA.csproj.GenerateResource.cache
+C:\Users\glado\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.VentaBA\obj\Release\BuenosAires.VentaBA.csproj.CoreCompileInputs.cache
+C:\Users\glado\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.VentaBA\obj\Release\BuenosAires.VentaBA.csproj.CopyComplete
+C:\Users\glado\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.VentaBA\obj\Release\BuenosAires.VentaBA.exe
+C:\Users\glado\Documents\GitHub\integracion\entrega este si que si\BuenosAiresCSharp\BuenosAires.VentaBA\obj\Release\BuenosAires.VentaBA.pdb
