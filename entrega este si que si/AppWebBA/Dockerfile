@@ -5,10 +5,10 @@ EXPOSE 8000
 
 WORKDIR /usr/src/app
 
-COPY requisitos.txt ./
+COPY requirements.txt ./
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD ["python3", "manage.py", "runserver", "0.0.0.0:8005"]
+CMD ["python3", "manage.py", "runserver", "0.0.0.0:8010"]
