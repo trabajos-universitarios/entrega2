@@ -19,3 +19,14 @@ C:\BuenosAires\BuenosAiresCSharp\BuenosAires.Model\obj\Debug\BuenosAires.Model.c
 C:\BuenosAires\BuenosAiresCSharp\BuenosAires.Model\obj\Debug\BuenosAires.Model.csproj.CopyComplete
 C:\BuenosAires\BuenosAiresCSharp\BuenosAires.Model\obj\Debug\BuenosAires.Model.dll
 C:\BuenosAires\BuenosAiresCSharp\BuenosAires.Model\obj\Debug\BuenosAires.Model.pdb
+D:\Downloads\14. BuenosAires-4Cap-Valida-CapServicios-StockProducto-Java-Django-ApiRest-SP-Tienda-SolServicio-Login-ApiDolar-ANWO\BuenosAiresCSharp\BuenosAires.Model\bin\Debug\BuenosAires.Model.dll
+D:\Downloads\14. BuenosAires-4Cap-Valida-CapServicios-StockProducto-Java-Django-ApiRest-SP-Tienda-SolServicio-Login-ApiDolar-ANWO\BuenosAiresCSharp\BuenosAires.Model\bin\Debug\BuenosAires.Model.pdb
+D:\Downloads\14. BuenosAires-4Cap-Valida-CapServicios-StockProducto-Java-Django-ApiRest-SP-Tienda-SolServicio-Login-ApiDolar-ANWO\BuenosAiresCSharp\BuenosAires.Model\bin\Debug\EntityFramework.dll
+D:\Downloads\14. BuenosAires-4Cap-Valida-CapServicios-StockProducto-Java-Django-ApiRest-SP-Tienda-SolServicio-Login-ApiDolar-ANWO\BuenosAiresCSharp\BuenosAires.Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\Downloads\14. BuenosAires-4Cap-Valida-CapServicios-StockProducto-Java-Django-ApiRest-SP-Tienda-SolServicio-Login-ApiDolar-ANWO\BuenosAiresCSharp\BuenosAires.Model\bin\Debug\EntityFramework.xml
+D:\Downloads\14. BuenosAires-4Cap-Valida-CapServicios-StockProducto-Java-Django-ApiRest-SP-Tienda-SolServicio-Login-ApiDolar-ANWO\BuenosAiresCSharp\BuenosAires.Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\Downloads\14. BuenosAires-4Cap-Valida-CapServicios-StockProducto-Java-Django-ApiRest-SP-Tienda-SolServicio-Login-ApiDolar-ANWO\BuenosAiresCSharp\BuenosAires.Model\obj\Debug\BuenosAires.Model.csproj.AssemblyReference.cache
+D:\Downloads\14. BuenosAires-4Cap-Valida-CapServicios-StockProducto-Java-Django-ApiRest-SP-Tienda-SolServicio-Login-ApiDolar-ANWO\BuenosAiresCSharp\BuenosAires.Model\obj\Debug\BuenosAires.Model.csproj.CoreCompileInputs.cache
+D:\Downloads\14. BuenosAires-4Cap-Valida-CapServicios-StockProducto-Java-Django-ApiRest-SP-Tienda-SolServicio-Login-ApiDolar-ANWO\BuenosAiresCSharp\BuenosAires.Model\obj\Debug\BuenosAires.Model.csproj.CopyComplete
+D:\Downloads\14. BuenosAires-4Cap-Valida-CapServicios-StockProducto-Java-Django-ApiRest-SP-Tienda-SolServicio-Login-ApiDolar-ANWO\BuenosAiresCSharp\BuenosAires.Model\obj\Debug\BuenosAires.Model.dll
+D:\Downloads\14. BuenosAires-4Cap-Valida-CapServicios-StockProducto-Java-Django-ApiRest-SP-Tienda-SolServicio-Login-ApiDolar-ANWO\BuenosAiresCSharp\BuenosAires.Model\obj\Debug\BuenosAires.Model.pdb

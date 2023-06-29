@@ -31,57 +31,33 @@ def tienda(request):
 
 
 def perfil_usuario(request):
-    # Se define un diccionario de datos con claves iniciales y un formulario PerfilUsuarioForm
     data = {"mesg": "", "form": PerfilUsuarioForm}
 
-    # Verifica si el método de la solicitud es POST
     if request.method == 'POST':
-        # Crea una instancia del formulario PerfilUsuarioForm con los datos de la solicitud POST
         form = PerfilUsuarioForm(request.POST)
-        
-        # Verifica si el formulario es válido
         if form.is_valid():
-            # Obtiene el usuario actual
             user = request.user
-            
-            # Actualiza los campos del usuario con los datos del formulario
             user.first_name = request.POST.get("first_name")
             user.last_name = request.POST.get("last_name")
             user.email = request.POST.get("email")
             user.save()
-            
-            # Obtiene el perfil de usuario asociado al usuario actual
             perfil = PerfilUsuario.objects.get(user=user)
-            
-            # Actualiza los campos del perfil de usuario con los datos del formulario
             perfil.rut = request.POST.get("rut")
             perfil.tipousu = request.POST.get("tipousu")
             perfil.dirusu = request.POST.get("dirusu")
             perfil.save()
-            
-            # Actualiza el mensaje en el diccionario de datos
             data["mesg"] = "¡Sus datos fueron actualizados correctamente!"
 
-    # Obtiene el perfil de usuario asociado al usuario actual
     perfil = PerfilUsuario.objects.get(user=request.user)
-    
-    # Crea una instancia del formulario PerfilUsuarioForm vacío
     form = PerfilUsuarioForm()
-    
-    # Establece los valores iniciales del formulario con los datos del usuario y perfil
     form.fields['first_name'].initial = request.user.first_name
     form.fields['last_name'].initial = request.user.last_name
     form.fields['email'].initial = request.user.email
     form.fields['rut'].initial = perfil.rut
     form.fields['tipousu'].initial = perfil.tipousu
     form.fields['dirusu'].initial = perfil.dirusu
-    
-    # Actualiza el formulario en el diccionario de datos
     data["form"] = form
-    
-    # Devuelve una respuesta renderizada utilizando la plantilla "core/perfil_usuario.html" y los datos
     return render(request, "core/perfil_usuario.html", data)
-
 
 def iniciar_sesion(request):
     # Se define un diccionario de datos con claves iniciales y una instancia del formulario IniciarSesionForm
@@ -274,11 +250,9 @@ def registrar_usuario(request):
         if form.is_valid():
             user = form.save()
             rut = request.POST.get("rut")
-            direccion = request.POST.get("direccion")
-            nombre = request.POST.get("first_name")
-            apellido = request.POST.get("last_name")
-            correo = request.POST.get("email")
-            PerfilUsuario.objects.update_or_create(user=user, rut=rut, dirusu=direccion, apeusu = apellido, nomusu = nombre, correo = correo, tipousu="Cliente", pwd=123)
+            tipousu = request.POST.get("tipousu")
+            dirusu = request.POST.get("dirusu")
+            PerfilUsuario.objects.update_or_create(user=user, rut=rut, tipousu=tipousu, dirusu=dirusu)
             return redirect(iniciar_sesion)
     form = RegistrarUsuarioForm()
     return render(request, "core/registrar_usuario.html", context={'form': form})
@@ -360,7 +334,9 @@ def solicitud_form(request,id):
 
 def mis_solicitudes(request):
     solicitudes = SolicitudServicio.objects.filter(nrofac__rutcli__user=request.user)
-    context = {'soli': solicitudes}
+    nombre_cliente = request.user.first_name
+    apellido_cliente = request.user.last_name
+    context = {'soli': solicitudes, 'nombre_cliente' : nombre_cliente,'apellido_cliente':apellido_cliente}
     return render(request, 'core/mis_solicitudes.html', context)
 
 def solicitudes_administrador(request):
@@ -380,7 +356,7 @@ def solicitudes_administrador(request):
         user = User.objects.get(username=request.user.username)
         perfil = PerfilUsuario.objects.get(user=user)
         permiso = perfil.tipousu
-    if permiso == "Administrador":
+    if permiso == "Administrador" or permiso=="Superusuario":
         solicitudes = SolicitudServicio.objects.all()
     elif permiso == "Técnico":
         solicitudes = SolicitudServicio.objects.filter(ruttec=perfil)

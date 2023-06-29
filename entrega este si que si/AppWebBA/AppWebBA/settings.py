@@ -92,7 +92,7 @@ WSGI_APPLICATION = 'AppWebBA.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'mssql',
-        'NAME': 'base_datos',
+        'NAME': 'base_de',
         'USER': 'sa',
         'PASSWORD': 'DuocBuenosAires123',
         'HOST': 'conexion.sofiawisdom.cl',

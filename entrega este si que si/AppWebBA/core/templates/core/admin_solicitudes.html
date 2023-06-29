@@ -35,10 +35,10 @@
                     {% for pro in soli %}
                     <tr>
                         <td>{{ pro.nrosol }}</td>
-                        <td>{{ pro.nrofac.rutcli.nomusu }} {{ pro.nrofac.rutcli.apeusu }}</td>
+                        <td>{{ pro.nrofac.rutcli.user.first_name }} {{ pro.nrofac.rutcli.user.last_name }}</td>
                         <td>{{ pro.tiposol }}</td>
                         <td>{{ pro.fechavisita }}</td>
-                        <td>{{ pro.ruttec.nomusu }} {{ pro.ruttec.apeusu }}</td>
+                        <td>{{ pro.ruttec.user.first_name }} {{ pro.ruttec.user.last_name }}</td>
                         <td>{{ pro.descsol }}</td>
                         <td>{{ pro.estadosol }}</td>
                         <td><button class="btn btn-danger btn-sm boton_chico boton-formulario" data-nrosol="{{ pro.nrosol }}">Editar</button></td>

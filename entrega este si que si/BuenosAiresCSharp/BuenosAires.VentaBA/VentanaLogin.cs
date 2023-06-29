@@ -57,5 +57,10 @@ namespace BuenosAires.VentaBA
             if (ventanaStockProducto.IsDisposed) ventanaStockProducto = new VentanaStockProducto();
             ventanaStockProducto.Show();
         }
+
+        private void VentanaLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -27,3 +27,20 @@ C:\BuenosAires\BuenosAiresCSharp\BuenosAires.VentaBA\obj\Debug\BuenosAires.Venta
 C:\BuenosAires\BuenosAiresCSharp\BuenosAires.VentaBA\obj\Debug\BuenosAires.VentaBA.VentanaAnwo.resources
 C:\BuenosAires\BuenosAiresCSharp\BuenosAires.VentaBA\obj\Debug\BuenosAires.VentaBA.VentanaLogin.resources
 C:\BuenosAires\BuenosAiresCSharp\BuenosAires.VentaBA\obj\Debug\BuenosAires.VentaBA.csproj.AssemblyReference.cache
+D:\Downloads\14. BuenosAires-4Cap-Valida-CapServicios-StockProducto-Java-Django-ApiRest-SP-Tienda-SolServicio-Login-ApiDolar-ANWO\BuenosAiresCSharp\BuenosAires.VentaBA\bin\Debug\BuenosAires.VentaBA.exe.config
+D:\Downloads\14. BuenosAires-4Cap-Valida-CapServicios-StockProducto-Java-Django-ApiRest-SP-Tienda-SolServicio-Login-ApiDolar-ANWO\BuenosAiresCSharp\BuenosAires.VentaBA\bin\Debug\BuenosAires.VentaBA.exe
+D:\Downloads\14. BuenosAires-4Cap-Valida-CapServicios-StockProducto-Java-Django-ApiRest-SP-Tienda-SolServicio-Login-ApiDolar-ANWO\BuenosAiresCSharp\BuenosAires.VentaBA\bin\Debug\BuenosAires.VentaBA.pdb
+D:\Downloads\14. BuenosAires-4Cap-Valida-CapServicios-StockProducto-Java-Django-ApiRest-SP-Tienda-SolServicio-Login-ApiDolar-ANWO\BuenosAiresCSharp\BuenosAires.VentaBA\bin\Debug\Newtonsoft.Json.dll
+D:\Downloads\14. BuenosAires-4Cap-Valida-CapServicios-StockProducto-Java-Django-ApiRest-SP-Tienda-SolServicio-Login-ApiDolar-ANWO\BuenosAiresCSharp\BuenosAires.VentaBA\bin\Debug\Newtonsoft.Json.xml
+D:\Downloads\14. BuenosAires-4Cap-Valida-CapServicios-StockProducto-Java-Django-ApiRest-SP-Tienda-SolServicio-Login-ApiDolar-ANWO\BuenosAiresCSharp\BuenosAires.VentaBA\obj\Debug\BuenosAires.VentaBA.csproj.AssemblyReference.cache
+D:\Downloads\14. BuenosAires-4Cap-Valida-CapServicios-StockProducto-Java-Django-ApiRest-SP-Tienda-SolServicio-Login-ApiDolar-ANWO\BuenosAiresCSharp\BuenosAires.VentaBA\obj\Debug\BuenosAires.VentaBA.Properties.Resources.resources
+D:\Downloads\14. BuenosAires-4Cap-Valida-CapServicios-StockProducto-Java-Django-ApiRest-SP-Tienda-SolServicio-Login-ApiDolar-ANWO\BuenosAiresCSharp\BuenosAires.VentaBA\obj\Debug\BuenosAires.VentaBA.VentanaAnwo.resources
+D:\Downloads\14. BuenosAires-4Cap-Valida-CapServicios-StockProducto-Java-Django-ApiRest-SP-Tienda-SolServicio-Login-ApiDolar-ANWO\BuenosAiresCSharp\BuenosAires.VentaBA\obj\Debug\BuenosAires.VentaBA.VentanaBuscarID.resources
+D:\Downloads\14. BuenosAires-4Cap-Valida-CapServicios-StockProducto-Java-Django-ApiRest-SP-Tienda-SolServicio-Login-ApiDolar-ANWO\BuenosAiresCSharp\BuenosAires.VentaBA\obj\Debug\BuenosAires.VentaBA.VentanaCatalogoProductos.resources
+D:\Downloads\14. BuenosAires-4Cap-Valida-CapServicios-StockProducto-Java-Django-ApiRest-SP-Tienda-SolServicio-Login-ApiDolar-ANWO\BuenosAiresCSharp\BuenosAires.VentaBA\obj\Debug\BuenosAires.VentaBA.VentanaLogin.resources
+D:\Downloads\14. BuenosAires-4Cap-Valida-CapServicios-StockProducto-Java-Django-ApiRest-SP-Tienda-SolServicio-Login-ApiDolar-ANWO\BuenosAiresCSharp\BuenosAires.VentaBA\obj\Debug\BuenosAires.VentaBA.VentanaStockProducto.resources
+D:\Downloads\14. BuenosAires-4Cap-Valida-CapServicios-StockProducto-Java-Django-ApiRest-SP-Tienda-SolServicio-Login-ApiDolar-ANWO\BuenosAiresCSharp\BuenosAires.VentaBA\obj\Debug\BuenosAires.VentaBA.csproj.GenerateResource.cache
+D:\Downloads\14. BuenosAires-4Cap-Valida-CapServicios-StockProducto-Java-Django-ApiRest-SP-Tienda-SolServicio-Login-ApiDolar-ANWO\BuenosAiresCSharp\BuenosAires.VentaBA\obj\Debug\BuenosAires.VentaBA.csproj.CoreCompileInputs.cache
+D:\Downloads\14. BuenosAires-4Cap-Valida-CapServicios-StockProducto-Java-Django-ApiRest-SP-Tienda-SolServicio-Login-ApiDolar-ANWO\BuenosAiresCSharp\BuenosAires.VentaBA\obj\Debug\BuenosAires.VentaBA.csproj.CopyComplete
+D:\Downloads\14. BuenosAires-4Cap-Valida-CapServicios-StockProducto-Java-Django-ApiRest-SP-Tienda-SolServicio-Login-ApiDolar-ANWO\BuenosAiresCSharp\BuenosAires.VentaBA\obj\Debug\BuenosAires.VentaBA.exe
+D:\Downloads\14. BuenosAires-4Cap-Valida-CapServicios-StockProducto-Java-Django-ApiRest-SP-Tienda-SolServicio-Login-ApiDolar-ANWO\BuenosAiresCSharp\BuenosAires.VentaBA\obj\Debug\BuenosAires.VentaBA.pdb

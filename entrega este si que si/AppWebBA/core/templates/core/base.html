@@ -74,7 +74,7 @@
                         <li id="perfil">{{ user.get_full_name }} ({{permiso}})</li>
                     {% endif %}
 
-                    {% if user.is_authenticated and permiso == 'Administrador' %}
+                    {% if user.is_authenticated and permiso == 'Administrador' or permiso == 'Superusuario' %}
                     <li id="admsis">Administrar sistema</li>
                     <li id="manpro">Mantener productos</li>
                     <li id="admsol">Administrar solicitudes</li>
