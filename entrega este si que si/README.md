@@ -1,4 +1,4 @@
-<em> # La web de music </em>
+<em> # La web de BuenosAires </em>
 
 <h1>Documentación</h1>
   <H2>Existen dos maneras de iniciar el proyecto.</h2>
